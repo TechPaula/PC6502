@@ -245,7 +245,7 @@
 		(property ki_fp_filters "MountingHole*Pad*")
 		(path "/dd71f6e8-29e5-401a-93c2-745b42e542a2")
 		(sheetname "/")
-		(sheetfile "PC6502-VIA.kicad_sch")
+		(sheetfile "PC6502-TEMPLATE.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -382,7 +382,7 @@
 		(property ki_fp_filters "CP_*")
 		(path "/8a081cd5-c6c1-4e40-8a42-231a8e59e846")
 		(sheetname "/")
-		(sheetfile "PC6502-VIA.kicad_sch")
+		(sheetfile "PC6502-TEMPLATE.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.711252 -0.91)
@@ -595,7 +595,7 @@
 		(property ki_fp_filters "MountingHole*Pad*")
 		(path "/d33df811-6092-408f-ba27-170fb0935456")
 		(sheetname "/")
-		(sheetfile "PC6502-VIA.kicad_sch")
+		(sheetfile "PC6502-TEMPLATE.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -719,7 +719,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/502a5819-de27-48ed-8087-cf408708fbe7")
 		(sheetname "/")
-		(sheetfile "PC6502-VIA.kicad_sch")
+		(sheetfile "PC6502-TEMPLATE.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -932,7 +932,7 @@
 		(property ki_fp_filters "MountingHole*Pad*")
 		(path "/8c8e317f-016c-4a3d-9cdc-9d07ff49962d")
 		(sheetname "/")
-		(sheetfile "PC6502-VIA.kicad_sch")
+		(sheetfile "PC6502-TEMPLATE.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -1070,7 +1070,7 @@
 		(property ki_fp_filters "MountingHole*Pad*")
 		(path "/7352dca2-997e-4e60-b957-0095a5ed2fd9")
 		(sheetname "/")
-		(sheetfile "PC6502-VIA.kicad_sch")
+		(sheetfile "PC6502-TEMPLATE.kicad_sch")
 		(attr exclude_from_pos_files)
 		(fp_circle
 			(center 0 0)
@@ -1208,7 +1208,7 @@
 		(property ki_fp_filters "Connector*:*_2x??_*")
 		(path "/dcc3d6ce-8c68-4d6c-b9b2-859ec00cb441")
 		(sheetname "/")
-		(sheetfile "PC6502-VIA.kicad_sch")
+		(sheetfile "PC6502-TEMPLATE.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -3.87 -1.33)
