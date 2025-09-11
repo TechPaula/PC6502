@@ -18,6 +18,7 @@ The CPLD code and .JED files are in /Software/CPLD
 ### Memory Map
 The memory map is subject to change in some parts, though I expect the RAM, ROM and Peripheral blocks to stay the same.
 
+#### High Level
 | Start | End | Size (Dec) | Size (Hex) | What is it | Notes |
 |-------|-----|----|----|----|---------------|
 | 0x0000|0x7FFF| 32768 | 0x8000 | RAM  | This is devided into sub parts below |
