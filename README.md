@@ -33,3 +33,22 @@ The memory map is subject to change in some parts, though I expect the RAM, ROM 
 | 0x0300|0x03FF| 256 | 0x0100 | Input buffer  | used by Basic/Wozmon |
 | 0x0400|0x7FFF| 31744 | 0x7C00 | User RAM  | un-allocated RAM |
 
+#### ROM 
+| Start | End | Size (Dec) | Size (Hex) | What is it | Notes |
+|-------|-----|----|----|----|---------------|
+| 0xC000|0xEFFF| 12288 | 0x3000 | MS Basic  | Basic Interpreter |
+| 0xF000|0xFDFF| 3584 | 0x0E00 | BIOS  | This is where common things are held, like getting input |
+| 0xFE00|0xFFF9| 506 | 0x1FA | WozMon  | Monitor program |
+| 0xFFFA|0xFFFF| 6 | 0x0006 | Jump vetors  | Vectors for power on, NMI, etc |
+
+#### Peripherals
+I expect frequent changes as I add/remove things;
+
+| Address | subAddr | RW | What is it | Notes |
+|---------|---------|----|-------|---------------|
+| 0xBFFF |  | RW | Console Control/Status | 60-fake-50, mostly the same as 6850, but no config |
+| 0xBFFE |  | RW | Console Control/Status | 60-fake-50, mostly the same as 6850, but no config |
+| 0xBFEn |  | RW | 6522 VIA A | Datasheet - https://eater.net/datasheets/w65c22.pdf |
+| 0xBFDn |  | RW | 6522 VIA A | Datasheet - https://eater.net/datasheets/w65c22.pdf |
+
+
