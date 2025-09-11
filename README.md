@@ -38,8 +38,12 @@ The memory map is subject to change in some parts, though I expect the RAM, ROM 
 |-------|-----|----|----|----|---------------|
 | 0xC000|0xEFFF| 12288 | 0x3000 | MS Basic  | Basic Interpreter |
 | 0xF000|0xFDFF| 3584 | 0x0E00 | BIOS  | This is where common things are held, like getting input |
-| 0xFE00|0xFFF9| 506 | 0x1FA | WozMon  | Monitor program |
+| 0xFE00|0xFFF9| 506 | 0x1FA | Monitor  | Monitor program |
 | 0xFFFA|0xFFFF| 6 | 0x0006 | Jump vetors  | Vectors for power on, NMI, etc |
+
+The OS is based on Grant Searle's 6502 computer work - http://searle.x10host.com/6502/Simple6502.html
+I've modified this to fit with my memory map, but it's not yet tested.
+I do plan to add bits and bobs to it as I need (e.g. LOAD, SAVE, DIR).
 
 #### Peripherals
 I expect frequent changes as I add/remove things;
