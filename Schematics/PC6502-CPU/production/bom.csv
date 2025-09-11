@@ -1,0 +1,29 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+"C1, C10, C11, C12, C2, C3, C4, C5, C7, C8, C9",0805,11,100nF,
+C6,1206,1,47uF,C96123
+"D1, D2, D3, D4, D5, D6, D7, D8",LTL4221NHBP,8,LED,
+D9,D_DO-35_SOD27_P7.62mm_Horizontal,1,1N4148,
+FOX1,Fox_avatar_18mm,1,SYM_Flash_Large,DNF
+"H3, H4, H5, H6",MountingHole_3.2mm_M3_Pad_TopBottom,4,MountingHole_Pad,DNF
+J1,PinSocket_2x32_P2.54mm_Vertical,1,BUS,DNF
+J2,PinHeader_1x03_P2.54mm_Horizontal,1,CONSOLE,
+J4,PinHeader_1x08_P2.54mm_Vertical,1,TEST,
+J5,PinHeader_2x05_P2.54mm_Vertical,1,Conn_02x05_Odd_Even,
+J6,PinHeader_2x02_P2.54mm_Horizontal,1,Conn_02x02_Odd_Even,
+"R1, R11, R16, R2, R3, R4, R5, R6, R7",0603,9,470R,
+"R10, R12, R13, R14",0603,4,10K,
+"R15, R23, R24",0603,3,4K7,
+"R17, R18",0603,2,0R,
+"R19, R20, R21, R22, R8, R9",0603,6,3K3,
+RN1,R_Array_SIP9,1,10K,
+S1,TL1250F180RQRCLR,1,TL1250F180RQRCLR,
+"TP2, TP3, TP4, TP5, TP6",TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded,5,TestPoint,
+U1,DIP-24_W15.24mm_Socket,1,MC68B50,
+U2,DIP-32_W15.24mm_LongPads,1,628128_DIP32_SSOP32,
+U3,DIP-32_W15.24mm_Socket,1,SST39SF010,
+U4,PLCC-44_THT-Socket,1,ATF1502AS,
+U5,DIP-40_W15.24mm_LongPads,1,W65C02,
+U6,DIP-20_W7.62mm_Socket,1,74AHC244,
+U7,DIP-16_W7.62mm_Socket,1,74LS161,
+X1,Oscillator_DIP-8,1,CXO_DIP8,
+X2,Oscillator_SMD_EuroQuartz_XO91-4Pin_7.0x5.0mm_HandSoldering,1,ASCO,

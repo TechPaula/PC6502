@@ -1,0 +1,83 @@
+Name     PC6502_CPU;
+PartNo   ;
+Date     2025;
+Revision ;
+Designer PaulaMaddox;
+Company  ;
+Assembly ;
+Location ;
+Device	f1502ispplcc44;
+
+/*****************************************************/
+/* Inputs */
+
+pin 5  = A0;
+pin 11 = A1;
+pin 6  = A2;
+pin 8  = A3;
+pin 9  = A4;
+pin 12 = A5;
+pin 14 = A6;
+pin 16 = A7;
+pin 17 = A8;
+pin 18 = A9;
+pin 19 = A10;
+pin 25 = A11;
+pin 20 = A12;
+pin 21 = A13;
+pin 24 = A14;
+pin 26 = A15;
+
+/*pin 36 = D0;*/				/* data bus input ready for BANKING memory if needed */
+/*pin 34 = D1;*/				/* data bus input ready for BANKING memory if needed */
+
+pin 4  = RnW;
+pin 2  = CLK;				/* System clock */
+pin 43 = CPU_CLK;			/* CPU Clock, may be strecthed version of system clock */
+
+
+/*****************************************************/
+/* Outputs */
+
+pin 40 = !RW;
+pin 39 = !RD;
+
+pin 33 = !ROM_CS;
+pin 31 = !RAM_CS;
+pin 29 = !CONSOLE_CS;
+
+pin 28 = RAM_A15;			/* spare RAM Address pin ready for BANKING memory if needed */
+pin 27 = RAM_A16;			/* spare RAM Address pin ready for BANKING memory if needed */
+
+pin 37 = E_6850;
+
+
+/*****************************************************/
+/* spares */
+/*pin 1  = TP2;*/		/* spare I pin */
+/*pin 44 = TP3;*/		/* spare I pin */
+/*pin 41 = TP4;*/		/* spare I/O pin */
+
+
+/*****************************************************/
+/* Address Decode */
+
+ROM_CS = A15 & A14;			/* 0xC000 -> 0xFFFF */
+RAM_CS = !A15;				/* 0x0000 -> 0x7FFF */
+CONSOLE_CS = A15 & !A14 & A13 & A12 & A11 & A10 & A9 & A8 & A7 & A6 & A5 & A4 & A3 & A2 & A1;	/* 0xBFFE and 0xBFFF */
+
+
+/*****************************************************/
+/* Logic Equations */
+
+E_6850 = CPU_CLK;
+
+RW = CPU_CLK & !RnW;
+RD = CPU_CLK & RnW;
+
+RAM_A15 = 'b'0;
+RAM_A16 = 'b'0;
+
+
+/* END OF FILE */
+/*****************************************************/

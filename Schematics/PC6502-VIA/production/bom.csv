@@ -1,0 +1,16 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+"C1, C2, C3, C8",0805,4,100nF,
+C6,1206,1,47uF,C96123
+"D1, D3",LTL4221NHBP,2,LED,
+"D2, D9",D_DO-35_SOD27_P7.62mm_Horizontal,2,1N4148,
+FOX1,Fox_avatar_18mm,1,SYM_Flash_Large,DNF
+"H3, H4, H5, H6",MountingHole_3.2mm_M3_Pad_TopBottom,4,MountingHole_Pad,DNF
+J1,PinSocket_2x32_P2.54mm_Vertical,1,BUS,DNF
+"J2, J3, J6, J7",PinSocket_2x06_P2.54mm_Horizontal,4,Conn_02x06_Odd_Even,
+"J4, J5",PinSocket_2x04_P2.54mm_Horizontal,2,Conn_02x04_Odd_Even,
+J8,PinHeader_2x05_P2.54mm_Vertical,1,Conn_02x05_Odd_Even,
+"R1, R2",0603,2,470R,
+"R15, R3",0603,2,4K7,
+"TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8, TP9",TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded,9,TestPoint,
+"U1, U2",DIP-40_W15.24mm,2,W65C22NxP,
+U4,PLCC-44_THT-Socket,1,ATF1502AS,

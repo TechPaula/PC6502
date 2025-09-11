@@ -1,0 +1,80 @@
+Name     PC6502_VIA;
+PartNo   ;
+Date     2025;
+Revision ;
+Designer PaulaMaddox;
+Company  ;
+Assembly ;
+Location ;
+Device	f1502ispplcc44;
+
+/*****************************************************/
+/* Inputs */
+
+pin 5  = A0;
+pin 11 = A1;
+pin 6  = A2;
+pin 8  = A3;
+pin 9  = A4;
+pin 12 = A5;
+pin 14 = A6;
+pin 16 = A7;
+pin 17 = A8;
+pin 18 = A9;
+pin 19 = A10;
+pin 25 = A11;
+pin 20 = A12;
+pin 21 = A13;
+pin 24 = A14;
+pin 26 = A15;
+
+/*pin 36 = D0;*/				/* spare data bus input */
+/*pin 34 = D1;*/				/* spare data bus input */
+
+pin 4  = RnW;
+pin 2  = CLK;				/* System clock */
+
+
+
+/*****************************************************/
+/* Outputs */
+
+pin 40 = !RW;
+pin 39 = !RD;
+
+pin 33 = !VIA_A_CS;
+pin 31 = !VIA_B_CS;
+
+pin 28 = VIA_A_LED;
+pin 27 = VIA_B_LED;
+
+
+
+/*****************************************************/
+/* spares */
+
+/*pin 29 = TP1*/		/* spare I/O pin */
+/*pin 1  = TP2*/		/* spare I pin */
+/*pin 44 = TP3*/		/* spare I pin */
+/*pin 41 = TP4*/		/* spare I/O pin */
+/*pin 37 = TP7*/		/* spare I/O pin */
+/*pin 39 = TP8*/		/* spare I/O pin */
+/*pin 40 = TP9*/		/* spare I/O pin */
+/*pin 43 = NOT_CONNECTED*/	/* Not connected */
+
+/*****************************************************/
+/* Address Decode */
+
+VIA_A_CS = A15 & !A14 & A13 & A12 & A11 & A10 & A9 & A8 & A7 & A6 &  A5 & !A4;	/* 0xBFE0 -> 0xBFEF */
+VIA_B_CS = A15 & !A14 & A13 & A12 & A11 & A10 & A9 & A8 & A7 & A6 & !A5 &  A4;	/* 0xBFD0 -> 0xBFDF */
+
+
+/*****************************************************/
+/* Logic Equations */
+
+VIA_A_LED = VIA_A_CS;
+VIA_B_LED = VIA_B_CS;
+
+
+/* END OF FILE */
+/*****************************************************/
