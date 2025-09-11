@@ -29,9 +29,8 @@ The memory map is subject to change in some parts, though I expect the RAM, ROM 
 | Start | End | Size (Dec) | Size (Hex) | What is it | Notes |
 |-------|-----|----|----|----|---------------|
 | 0x0000|0x00FF| 256 | 0x0100 | Zero Page  | Used by the 6502 |
-| 0x0100|0x02FF| 512 | 0x0200 | Stack  | I think this is the stack |
-| 0x0300|0x03FF| 256 | 0x0100 | Input buffer  | used by Basic/Wozmon |
-| 0x0400|0x7FFF| 31744 | 0x7C00 | User RAM  | un-allocated RAM |
+| 0x0100|0x02FF| 256 | 0x0100 | Stack  | Used by 6502 |
+| 0x0200|0x7FFF| 32256 | 0x7E00 | User RAM  | un-allocated RAM |
 
 #### ROM 
 | Start | End | Size (Dec) | Size (Hex) | What is it | Notes |
