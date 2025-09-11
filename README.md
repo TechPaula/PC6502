@@ -3,6 +3,12 @@ My 6502 project in a PC104 like formfactor
 
 This is VERY VERY unstable, I do not know what works and what doesn't.
 
+
+## Status
+2025-09-08 - PCBs ordered, Parts ordered.
+2025-09-11 - Edited the firmware based on Grant Searl's code. Created this Repository
+
+
 ## CPU Board
 ![Render of PC6502 CPU board](/Images/PC6502_CPU_Render.png?raw=true "Render of the PC6502 CPU board")
 
