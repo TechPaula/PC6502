@@ -1,14 +1,10 @@
 # PC6502
-My 6502 project in a PC104 like formfactor
-
-This is VERY VERY unstable, I do not know what works and what doesn't.
-
+My 6502 project in a PC104 like formfactor.  
+**This is VERY VERY unstable, I do not know what works and what doesn't, use at your own risk of sanity and wasted money/chips**  
 
 ## Status
 2025-09-08 - PCBs ordered, Parts ordered.  
 2025-09-11 - Edited the firmware based on Grant Searl's code. Created this Repository  
-
-
 
 ## CPU Board
 ![Render of PC6502 CPU board](/Images/PC6502_CPU_Render.png?raw=true "Render of the PC6502 CPU board")
@@ -64,11 +60,11 @@ I expect frequent changes as I add/remove things;
 ## The Future
 I have a bunch of things I want to try adding, some ideas I have are below, some may happen, some may not and they're not in any particular order;
 
-* Power Board: LAmost certainly will be USB-C PD to 5V, I'm aware that some of the things I want to add can be quite heavy on power consumption, so this seems like a sensible way to future proof it to an extent.
-* RA8875 based display & keyboard interface: something that can display text and simple graphics and let my type without needing my laptop. I'll probably buy an off the shelf display with this on and memory map it as a peripheral somewhere and it will almost certainly be PS/2 keyboard.
-* RTC & ASCII Display: Maybe an RTC and an ascii display (I have a couple of QDSP2118 displays somewhere that I'd like to use)
-* A Sound Engine: I'm thinking of my own simple Wavetable based sound engine, possibly with analogue VCF/VCAs. Some kind of tracker software or even MIDI interface to go with it?
-* Compact Flash / SD Storage: I'm going to want something in the long run as retyping code is going to get tedious quickly. I have found a 6502 SPI interface here, so that may speed things up - https://sbc.rictor.org/65spi2.html
-* Some kind of HDMI grpahics adapter: My current thinking is the videobeast (https://feertech.com/microbeast/videobeast.html) but that needs a big hole in RAM.
-* Transputer Link Adapter/Card: because I still want to use these, but I think having them "speed up" computation on a 6502 is going to have a bigger impact than a 1GHz PC.
+* **Power Board**: LAmost certainly will be USB-C PD to 5V, I'm aware that some of the things I want to add can be quite heavy on power consumption, so this seems like a sensible way to future proof it to an extent.
+* **RA8875 based display & keyboard interface**: something that can display text and simple graphics and let my type without needing my laptop. I'll probably buy an off the shelf display with this on and memory map it as a peripheral somewhere and it will almost certainly be PS/2 keyboard.
+* **RTC & ASCII Display**: Maybe an RTC and an ascii display (I have a couple of QDSP2118 displays somewhere that I'd like to use)
+* **A Sound Engine**: I'm thinking of my own simple Wavetable based sound engine, possibly with analogue VCF/VCAs. Some kind of tracker software or even MIDI interface to go with it?
+* **Compact Flash / SD Storage**: I'm going to want something in the long run as retyping code is going to get tedious quickly. I have found a 6502 SPI interface here, so that may speed things up - https://sbc.rictor.org/65spi2.html
+* **Some kind of HDMI grpahics adapter**: My current thinking is the videobeast (https://feertech.com/microbeast/videobeast.html) but that needs a big hole in RAM.
+* **Transputer Link Adapter/Card**: because I still want to use these, but I think having them "speed up" computation on a 6502 is going to have a bigger impact than a 1GHz PC.
 
