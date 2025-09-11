@@ -46,9 +46,9 @@ I expect frequent changes as I add/remove things;
 
 | Address | subAddr | RW | What is it | Notes |
 |---------|---------|----|-------|---------------|
-| 0xBFFF |  | RW | Console Control/Status | 60-fake-50, mostly the same as 6850, but no config |
-| 0xBFFE |  | RW | Console Control/Status | 60-fake-50, mostly the same as 6850, but no config |
-| 0xBFEn |  | RW | 6522 VIA A | Datasheet - https://eater.net/datasheets/w65c22.pdf |
-| 0xBFDn |  | RW | 6522 VIA A | Datasheet - https://eater.net/datasheets/w65c22.pdf |
+| 0xBFFF | n/a | RW | Console Control/Status | 60-fake-50, mostly the same as 6850, but no config |
+| 0xBFFE | n/a | RW | Console Control/Status | 60-fake-50, mostly the same as 6850, but no config |
+| 0xBFE- | 0 - F | RW | 6522 VIA A | Datasheet - https://eater.net/datasheets/w65c22.pdf |
+| 0xBFD- | 0 - F | RW | 6522 VIA A | Datasheet - https://eater.net/datasheets/w65c22.pdf |
 
 
