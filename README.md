@@ -5,8 +5,9 @@ This is VERY VERY unstable, I do not know what works and what doesn't.
 
 
 ## Status
-2025-09-08 - PCBs ordered, Parts ordered.
-2025-09-11 - Edited the firmware based on Grant Searl's code. Created this Repository
+2025-09-08 - PCBs ordered, Parts ordered.  
+2025-09-11 - Edited the firmware based on Grant Searl's code. Created this Repository  
+
 
 
 ## CPU Board
