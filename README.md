@@ -21,4 +21,6 @@ The memory map is subject to change in some parts, though I expect the RAM, ROM 
 | Start | End | Size (Dec) | Size (Hex) | What is it | Notes |
 |-------|-----|----|----|----|---------------|
 | 0x0000|0x7FFF| 32768 | 0x8000 | RAM  | This is devided into sub parts below |
+| 0x8000|0xBFFF| 16384 | 0x4000 | Peripherals | See table below for more info |
+| 0xC000|0xFFFF| 16384 | 0x4000 | ROM | More info below |
 
