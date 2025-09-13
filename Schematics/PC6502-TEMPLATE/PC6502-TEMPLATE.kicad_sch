@@ -2586,6 +2586,16 @@
 		)
 		(uuid "bd8a69c6-65cf-498e-ab6f-44ef30102bb2")
 	)
+	(text "I now realise that some peripherals \nneed the stretched CPU clock, DOH!\nSo I'll mod wire the CPU_CLOCK on \nthe main CPU board to SP_CLK :("
+		(exclude_from_sim no)
+		(at 252.222 145.288 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "d2221d2e-bd19-460d-8a38-6a7307d1efa5")
+	)
 	(junction
 		(at 227.33 63.5)
 		(diameter 0)
@@ -2657,6 +2667,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5821d32a-0ee7-49c3-8a01-3fab20e41425")
+	)
+	(junction
+		(at 233.68 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5dad57bf-13bd-4243-9ef0-7049858d427c")
 	)
 	(junction
 		(at 227.33 66.04)
@@ -3076,6 +3092,16 @@
 		)
 		(uuid "104d16cd-10f1-4cfd-ab31-6795729b3198")
 	)
+	(wire
+		(pts
+			(xy 233.68 138.43) (xy 233.68 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "124f2307-84a0-4461-a5e6-21b5a44f428e")
+	)
 	(bus
 		(pts
 			(xy 187.96 83.82) (xy 187.96 86.36)
@@ -3448,7 +3474,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 124.46) (xy 236.22 124.46)
+			(xy 223.52 124.46) (xy 233.68 124.46)
 		)
 		(stroke
 			(width 0)
@@ -3495,6 +3521,16 @@
 			(type default)
 		)
 		(uuid "77a2350b-1f3a-45bd-8228-bb2ffe0992a2")
+	)
+	(wire
+		(pts
+			(xy 242.57 138.43) (xy 233.68 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77cd8182-4329-4fe1-9c06-2960d07366ee")
 	)
 	(wire
 		(pts
@@ -3965,6 +4001,16 @@
 			(type default)
 		)
 		(uuid "ccd2d95a-28a2-406a-b159-49f4b173fb19")
+	)
+	(wire
+		(pts
+			(xy 233.68 124.46) (xy 236.22 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce2421bc-89b2-47c2-8f1f-f700403dd495")
 	)
 	(bus
 		(pts
@@ -4484,6 +4530,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "CPU_CLK"
+		(shape output)
+		(at 242.57 138.43 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "516cf436-5541-41fc-9128-fa0b58a91b7a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 253.9614 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)

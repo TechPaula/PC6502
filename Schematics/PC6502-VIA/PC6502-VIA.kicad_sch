@@ -6054,6 +6054,16 @@
 		)
 		(uuid "1bbf7454-1773-4755-a88d-23cf0a6208ea")
 	)
+	(text "I now realise that some peripherals \nneed the stretched CPU clock, DOH!\nSo I'll mod wire the CPU_CLOCK on \nthe main CPU board to SP_CLK :("
+		(exclude_from_sim no)
+		(at 35.56 174.244 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "1c0e92af-883b-4bd6-830e-55c1f5350602")
+	)
 	(text "6522-B"
 		(exclude_from_sim no)
 		(at 237.236 176.276 0)

@@ -9968,6 +9968,16 @@
 		)
 		(uuid "5e2e72ca-4ae5-48e7-ad0f-4fd7b50f80f1")
 	)
+	(text "I now realise that some peripherals \nneed the stretched CPU clock, DOH!\nSo I'll mod wire the CPU_CLOCK on \nthe main CPU board to SP_CLK :("
+		(exclude_from_sim no)
+		(at 385.826 194.818 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "6902fced-af20-45d2-baaa-618914a05fb5")
+	)
 	(text "RAMA15\n"
 		(exclude_from_sim no)
 		(at 249.682 263.398 0)

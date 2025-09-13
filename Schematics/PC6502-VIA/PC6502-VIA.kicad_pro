@@ -52,16 +52,7 @@
         }
       },
       "diff_pair_dimensions": [],
-      "drc_exclusions": [
-        [
-          "starved_thermal|125067553|125177552|6dfa675b-b775-4f86-8b1e-2b4d17cbef32|bfc42408-9969-4039-a8b8-c36ac4b8cba8|B.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|131380000|61200000|6dfa675b-b775-4f86-8b1e-2b4d17cbef32|7a7a7407-46f8-4c51-8920-01b157f18947|B.Cu",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -498,7 +489,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "PC6502-VIA.step",
       "svg": "",
       "vrml": ""
     },

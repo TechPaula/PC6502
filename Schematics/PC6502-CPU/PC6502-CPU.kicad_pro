@@ -502,7 +502,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "PC6502-CPU.step",
       "svg": "",
       "vrml": ""
     },
