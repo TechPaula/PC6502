@@ -15,9 +15,11 @@ It's also not very stable just yet. I do sometimes get corruption in the data to
 
 
 ## CPU Board
-![Render of PC6502 CPU board](/Images/PC6502_CPU_Render.png?raw=true "Render of the V1.00 PC6502 CPU board")
+Actual PCB:
 ![Actual PC6502 CPU board](/Images/PC6502_V100.jpg?raw=true "Actual V1.00 PC6502 CPU board undergoing testing")
+Mandlebrot Code:
 ![Mandlebrot code and run](/Images/ScreenShotV100_MandleCode.png?raw=true "Mandlebrot running on hardware")
+Corruption:
 ![Mandlebrot corruption](/Images/ScreenShotV100_MandleCorrupt.png?raw=true "Mandlebrot showing corruption, top is correct")
 
 
