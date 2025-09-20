@@ -8757,6 +8757,16 @@
 		)
 		(uuid "c6b4fca2-3ac3-42d0-aae8-489467e010f3")
 	)
+	(text "Note that the WRITE is active HIGH!"
+		(exclude_from_sim no)
+		(at 385.064 88.138 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ccfeb42b-69cd-4146-93bf-0ffeeef73b8c")
+	)
 	(text "SLOW0\n"
 		(exclude_from_sim no)
 		(at 249.174 250.698 0)
@@ -17727,7 +17737,7 @@
 			)
 		)
 	)
-	(global_label "nWR_FT"
+	(global_label "WR_FT"
 		(shape input)
 		(at 370.84 63.5 180)
 		(fields_autoplaced yes)
@@ -17739,7 +17749,7 @@
 		)
 		(uuid "a6463443-003c-4e38-b10f-452e8dd9c608")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 360.9606 63.5 0)
+			(at 362.1096 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17815,7 +17825,7 @@
 			)
 		)
 	)
-	(global_label "nWR_FT"
+	(global_label "WR_FT"
 		(shape output)
 		(at 190.5 144.78 0)
 		(fields_autoplaced yes)
@@ -17827,7 +17837,7 @@
 		)
 		(uuid "b10cfccc-ea8a-4308-850a-ded61598afeb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 200.3794 144.78 0)
+			(at 199.2304 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27870,7 +27880,7 @@
 				(justify left)
 			)
 		)
-		(pin "nWR_FT" input
+		(pin "WR_FT" input
 			(at 379.73 63.5 180)
 			(uuid "a9e8af0c-deb3-4f7a-b072-47bdde4830d7")
 			(effects

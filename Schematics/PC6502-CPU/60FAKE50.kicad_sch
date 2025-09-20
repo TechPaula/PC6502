@@ -3608,7 +3608,7 @@
 		)
 		(uuid "3f2de32a-a065-40fd-bb9d-32499a304f04")
 	)
-	(hierarchical_label "nWR_FT"
+	(hierarchical_label "WR_FT"
 		(shape input)
 		(at 212.09 114.3 0)
 		(effects
