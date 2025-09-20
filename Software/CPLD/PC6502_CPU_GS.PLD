@@ -71,7 +71,7 @@ CONSOLE_CS = A15 & !A14 & A13 & !A12;	/* Serial port 0xA000 - 0xAFFF */
 /*****************************************************/
 /* Logic Equations */
 
-E_6850 = CPU_CLK;
+E_6850 = CLK;
 
 RW = CPU_CLK & !RnW;
 RD = CPU_CLK & RnW;
