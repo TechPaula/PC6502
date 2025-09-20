@@ -5,9 +5,21 @@ My 6502 project in a PC104 like formfactor.
 ## Status
 2025-09-08 - PCBs ordered, Parts ordered.  
 2025-09-11 - Edited the firmware based on Grant Searl's code. Created this Repository  
+2025-09-20 - Version 1.0 is running with a few modifications, so I've created Version 1.1 of schematics and PCB. I've added some basic examples, currently you have to copy and paste into the serial terminal. Current memory map is the same as Grants;
+0000-7FFF 32K RAM
+8000-9FFF FREE SPACE (8K)
+A000-BFFF SERIAL INTERFACE (minimally decoded)
+C000-FFFF 16K ROM (BASIC from C000 TO DED3, serial routines FF00 to FFFF)
+It's also not very stable just yet. I do sometimes get corruption in the data to/from the serial console.
+
+
 
 ## CPU Board
-![Render of PC6502 CPU board](/Images/PC6502_CPU_Render.png?raw=true "Render of the PC6502 CPU board")
+![Render of PC6502 CPU board](/Images/PC6502_CPU_Render.png?raw=true "Render of the V1.00 PC6502 CPU board")
+![Actual PC6502 CPU board](/Images/PC6502_V100.jpg?raw=true "Actual V1.00 PC6502 CPU board undergoing testing")
+![Mandlebrot code and run](/Images/ScreenShotV100_MandleCode.png?raw=true "Mandlebrot running on hardware")
+![Mandlebrot corruption](/Images/ScreenShotV100_MandleCorrupt.png?raw=true "Mandlebrot showing corruption, top is correct")
+
 
 This board has a 6502, RAM and ROM on board, along with an ATF1502 for address decoding. There is also a 60-fake-50 (instaled of 6850) which is not my design but emulates the 6850 with USB.
 The CPLD code and .JED files are in /Software/CPLD
