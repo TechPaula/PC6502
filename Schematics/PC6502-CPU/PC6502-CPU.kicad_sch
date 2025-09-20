@@ -9232,10 +9232,6 @@
 		(uuid "6a6550ce-205c-4f3a-99e6-82bb1eb444ed")
 	)
 	(no_connect
-		(at 124.46 257.81)
-		(uuid "92600c89-ad45-4d8d-ba52-dbd399dc6b25")
-	)
-	(no_connect
 		(at 64.77 149.86)
 		(uuid "bed8de6e-0e2e-4f66-b313-2fc21d82cea0")
 	)
@@ -10503,6 +10499,16 @@
 	)
 	(wire
 		(pts
+			(xy 104.14 236.22) (xy 104.14 232.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09c7c83a-c228-4410-89c3-c4845399d84c")
+	)
+	(wire
+		(pts
 			(xy 161.29 82.55) (xy 161.29 90.17)
 		)
 		(stroke
@@ -10633,7 +10639,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 257.81) (xy 143.51 257.81)
+			(xy 124.46 236.22) (xy 128.27 236.22)
 		)
 		(stroke
 			(width 0)
@@ -13533,7 +13539,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 247.65) (xy 132.08 250.19)
+			(xy 116.84 226.06) (xy 116.84 228.6)
 		)
 		(stroke
 			(width 0)
@@ -13870,6 +13876,16 @@
 			(type default)
 		)
 		(uuid "a8e340b3-4e76-4cfb-8ea2-e3e74910655a")
+	)
+	(wire
+		(pts
+			(xy 109.22 236.22) (xy 104.14 236.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a90bdf37-65ed-4547-8a2d-8ba7080452f0")
 	)
 	(bus
 		(pts
@@ -14953,7 +14969,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 265.43) (xy 132.08 267.97)
+			(xy 116.84 243.84) (xy 116.84 246.38)
 		)
 		(stroke
 			(width 0)
@@ -15290,6 +15306,16 @@
 			(type default)
 		)
 		(uuid "ecf97965-8170-4091-91f4-5aa931066571")
+	)
+	(wire
+		(pts
+			(xy 104.14 222.25) (xy 104.14 224.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed00cad9-0e5d-4fea-8f87-f7d032f1b3c3")
 	)
 	(wire
 		(pts
@@ -16779,7 +16805,7 @@
 	)
 	(global_label "SYSCLK"
 		(shape output)
-		(at 143.51 257.81 0)
+		(at 128.27 236.22 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -16789,7 +16815,7 @@
 		)
 		(uuid "0546d82a-c964-44c6-87f4-d0d2aaef2f6f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 153.5709 257.81 0)
+			(at 138.3309 236.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19781,7 +19807,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 132.08 247.65 0)
+		(at 116.84 226.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19790,7 +19816,7 @@
 		(fields_autoplaced yes)
 		(uuid "2731d10e-726a-4140-a705-a8210a78ab1a")
 		(property "Reference" "#PWR033"
-			(at 132.08 251.46 0)
+			(at 116.84 229.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19799,7 +19825,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 132.08 242.57 0)
+			(at 116.84 220.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19807,7 +19833,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 132.08 247.65 0)
+			(at 116.84 226.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19816,7 +19842,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 132.08 247.65 0)
+			(at 116.84 226.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19825,7 +19851,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 132.08 247.65 0)
+			(at 116.84 226.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22387,7 +22413,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 132.08 267.97 0)
+		(at 116.84 246.38 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -22396,7 +22422,7 @@
 		(fields_autoplaced yes)
 		(uuid "826dab59-fbdd-42ab-9237-6c754170917b")
 		(property "Reference" "#PWR07"
-			(at 132.08 274.32 0)
+			(at 116.84 252.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22405,7 +22431,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 132.08 272.5325 0)
+			(at 116.84 250.9425 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22413,7 +22439,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 132.08 267.97 0)
+			(at 116.84 246.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22422,7 +22448,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 132.08 267.97 0)
+			(at 116.84 246.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22431,7 +22457,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 132.08 267.97 0)
+			(at 116.84 246.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24698,6 +24724,76 @@
 			(project "PC6502-CPU"
 				(path "/f3365b77-bdc1-4fa0-8030-841dab6ab2be"
 					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 104.14 228.6 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bd60aeb5-1cdf-4dd6-add4-75b738f4e8f0")
+		(property "Reference" "R25"
+			(at 101.6 227.3299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "3K3"
+			(at 101.6 229.8699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 105.918 228.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 104.14 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 104.14 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "33e28e08-992e-495e-b5bc-a95632a2ed4c")
+		)
+		(pin "2"
+			(uuid "07c96229-dd8a-4eaf-a42c-eb2c5c9e5bc0")
+		)
+		(instances
+			(project "PC6502-CPU"
+				(path "/f3365b77-bdc1-4fa0-8030-841dab6ab2be"
+					(reference "R25")
 					(unit 1)
 				)
 			)
@@ -27178,6 +27274,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 104.14 222.25 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f398190b-862c-4254-8b6b-99710d876146")
+		(property "Reference" "#PWR050"
+			(at 104.14 226.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 104.14 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 104.14 222.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 104.14 222.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 104.14 222.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "084ea82d-ed3f-46e2-aa8b-53ce424eb039")
+		)
+		(instances
+			(project "PC6502-CPU"
+				(path "/f3365b77-bdc1-4fa0-8030-841dab6ab2be"
+					(reference "#PWR050")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 250.19 222.25 0)
 		(mirror x)
@@ -27315,7 +27477,7 @@
 	)
 	(symbol
 		(lib_id "Oscillator:CXO_DIP8")
-		(at 132.08 257.81 0)
+		(at 116.84 236.22 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -27323,7 +27485,7 @@
 		(dnp no)
 		(uuid "f50538bf-e44a-4d20-ab4a-ccf1e95ea69c")
 		(property "Reference" "X1"
-			(at 134.62 248.92 0)
+			(at 119.38 227.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27331,7 +27493,7 @@
 			)
 		)
 		(property "Value" "CXO_DIP8"
-			(at 138.43 251.46 0)
+			(at 123.19 229.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27339,7 +27501,7 @@
 			)
 		)
 		(property "Footprint" "Oscillator:Oscillator_DIP-8"
-			(at 143.51 266.7 0)
+			(at 128.27 245.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27348,7 +27510,7 @@
 			)
 		)
 		(property "Datasheet" "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf"
-			(at 129.54 257.81 0)
+			(at 114.3 236.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27357,7 +27519,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 132.08 257.81 0)
+			(at 116.84 236.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
