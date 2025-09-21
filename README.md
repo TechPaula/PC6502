@@ -11,7 +11,8 @@ My 6502 project in a PC104 like formfactor.
 A000-BFFF SERIAL INTERFACE (minimally decoded)
 C000-FFFF 16K ROM (BASIC from C000 TO DED3, serial routines FF00 to FFFF)
 It's also not very stable just yet. I do sometimes get corruption in the data to/from the serial console.
-2025-09-21 - Version 1.1 Schematic and PCB uploaded. A lot of changes and simplicifcation in some ways. 
+2025-09-21 - Version 1.1 Schematic and PCB uploaded. A lot of changes and simplicifcation in some ways, A simpler CPU board (direct link to FT245R, 74161 removed and some tidying of tracks). Fixed a couple of floating inputs to RAM/ROM
+VIA is much simpler, having just the one VIA chip. POWER board has USB-PD and a 24VDC input for higher power stuff in the future. These three PCBs have been orderred.
 
 
 ## CPU Board
