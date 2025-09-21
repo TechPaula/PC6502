@@ -11,7 +11,7 @@ My 6502 project in a PC104 like formfactor.
 A000-BFFF SERIAL INTERFACE (minimally decoded)
 C000-FFFF 16K ROM (BASIC from C000 TO DED3, serial routines FF00 to FFFF)
 It's also not very stable just yet. I do sometimes get corruption in the data to/from the serial console.
-
+2025-09-21 - Version 1.1 Schematic and PCB uploaded. A lot of changes and simplicifcation in some ways. 
 
 
 ## CPU Board
@@ -32,9 +32,7 @@ This board has a 6502, RAM and ROM on board, along with an ATF1502 for address d
 The CPLD code and .JED files are in /Software/CPLD
 
 ## VIA Board
-![Render of PC6502 VIA board](/Images/PC6502_VIA_Render.png?raw=true "Render of the PC6502 VIA board")
-
-This board has two 6522 VIAs and an ATF1502 for address decoding, The VIA outputs are brought out to PMOD style headers (though are 5V)
+This board has a single 6522 VIA and an ATF1502 for address decoding, The VIA outputs are brought out to PMOD style headers (though are 5V)
 The CPLD code and .JED files are in /Software/CPLD
 
 ### Memory Map
