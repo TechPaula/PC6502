@@ -34,6 +34,7 @@ pin 26 = A15;
 pin 4  = RnW;
 pin 2  = CLK;				/* System clock */
 pin 43 = CPU_CLK;			/* CPU Clock, may be strecthed version of system clock */
+pin 41 = OSC_CLK;
 
 
 /*****************************************************/
@@ -63,9 +64,9 @@ pin 37 = E_6850;
 /* Address Decode */
 
 /* Grant Searle memory map */
-ROM_CS = A15 & A14; 					/* ROM 0xC000 - 0xFFFF */
-RAM_CS = !A15;							/* RAM 0x0000 - 0x7FFF */
-CONSOLE_CS = A15 & !A14 & A13 & !A12;	/* Serial port 0xA000 - 0xAFFF */
+ROM_CS = A15 & A14; 						/* ROM 0xC000 - 0xFFFF */
+RAM_CS = !A15;					/* RAM 0x0000 - 0x7FFF */
+CONSOLE_CS = A15 & !A14 & A13 & !A12 & !OSC_CLK;	/* Serial port 0xA000 - 0xAFFF */
 
 
 /*****************************************************/
