@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.25
+          "min_clearance": 0.5
         }
       },
       "diff_pair_dimensions": [],
@@ -99,7 +99,7 @@
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
-        "starved_thermal": "ignore",
+        "starved_thermal": "error",
         "text_height": "warning",
         "text_on_edge_cuts": "error",
         "text_thickness": "warning",
@@ -450,7 +450,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "PC6502-STORAGE.kicad_pro",
+    "filename": "PC6502-FM-SPEECH.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -489,7 +489,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "PC6502-PWRSTOR.step",
+      "step": "",
       "svg": "",
       "vrml": ""
     },
@@ -558,109 +558,13 @@
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Arrow Price/Stock",
-          "name": "Arrow Price/Stock",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Field5",
-          "name": "Field5",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Height",
-          "name": "Height",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "LCSC",
-          "name": "LCSC",
           "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Link",
-          "name": "Link",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Manufacturer",
-          "name": "Manufacturer",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "ManufacturerPN",
-          "name": "ManufacturerPN",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Manufacturer_Name",
-          "name": "Manufacturer_Name",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Manufacturer_Part_Number",
-          "name": "Manufacturer_Part_Number",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Mouser Part Number",
-          "name": "Mouser Part Number",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Mouser Price/Stock",
-          "name": "Mouser Price/Stock",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Device",
-          "name": "Sim.Device",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Pins",
-          "name": "Sim.Pins",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Arrow Part Number",
-          "name": "Arrow Part Number",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Description",
-          "name": "Description",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "#",
-          "name": "${ITEM_NUMBER}",
-          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "",
+      "name": "Default Editing",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -708,6 +612,18 @@
     [
       "431ed1ef-9b76-40e5-9f99-258de85faf41",
       "Root"
+    ],
+    [
+      "052e0a31-ce9a-41d4-83c9-879be19d3a24",
+      "OPL"
+    ],
+    [
+      "f76dd0b6-8d4f-4054-8a53-13f969db2124",
+      "SpeechSynth"
+    ],
+    [
+      "5f47f1cc-0c59-410b-8620-fa2756ff87b0",
+      "Output"
     ]
   ],
   "text_variables": {}

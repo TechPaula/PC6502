@@ -8251,7 +8251,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9ed64e4d-2b3a-477f-8f5e-1c704da7d8b8")
 		(property "Reference" "U3"
@@ -8263,7 +8263,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ATF1502AS"
+		(property "Value" "ATF1504AS"
 			(at 66.9133 48.26 0)
 			(effects
 				(font
@@ -9491,7 +9491,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "e5070fdb-8988-4d3b-8897-5057ddb07b38")
 		(property "Reference" "D10"
 			(at 26.416 85.09 0)

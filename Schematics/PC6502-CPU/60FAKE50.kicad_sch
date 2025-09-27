@@ -3692,7 +3692,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "09c806a0-d73a-4ab7-b567-5d36a72d4e7d")
 		(property "Reference" "J3"
@@ -3878,7 +3878,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "170971ec-b8a4-43e5-8965-4d8a7820f2f7")
 		(property "Reference" "J2"
@@ -5343,7 +5343,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e3fc8b4c-0e3a-417c-9071-e7b54be14edc")
 		(property "Reference" "FB1"
