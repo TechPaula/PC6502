@@ -23,7 +23,7 @@ Actual PCB:
 
 Mandlebrot Code:
 
-![Mandlebrot code and run](/Images/ScreenShotV10_MandleCode.png?raw=true "Mandlebrot running on hardware")
+![Mandlebrot code and run](/Images/ScreenShotV100_MandleCode.png?raw=true "Mandlebrot running on hardware")
 
 
 This board has a 6502, RAM and ROM on board, along with an ATF1502 for address decoding. There is also an FT245R which is pretending to be a 68B50 with USB. 
