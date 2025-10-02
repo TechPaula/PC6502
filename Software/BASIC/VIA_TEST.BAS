@@ -1,0 +1,31 @@
+ 10 REM x is the VIA address in decimal
+ 20 LET X = 41088
+ 29 REM Set port B as output
+ 30 POKE X+2, 255
+ 34 REM do a little jig
+ 35 FOR Z = 1 TO 5
+ 40 POKE X, 85
+ 45 FOR T = 0 TO 1500
+ 46 NEXT T
+ 50 POKE X, 170
+ 55 FOR T = 0 TO 1500
+ 56 NEXT T
+ 60 NEXT Z
+ 70 FOR T = 0 TO 255
+ 80 POKE X, T
+ 90 NEXT T
+ 94 REM knight rider lights
+ 95 Y = 1
+ 100 FOR Z = 1 TO 7
+ 110 POKE X, Y
+ 120 Y = Y * 2
+ 125 FOR T = 1 TO 500
+ 126 NEXT T
+ 130 NEXT Z
+ 140 FOR Z = 1 TO 7
+ 150 POKE X, Y
+ 160 Y = Y / 2
+ 165 FOR T = 1 TO 500
+ 166 NEXT T
+ 170 NEXT Z
+ 180 GOTO 95
