@@ -4,15 +4,19 @@ My 6502 project in a PC104 like form factor.
 
 ## Status
 2025-09-08 - PCBs ordered, Parts ordered.  
+
 2025-09-11 - Edited the firmware based on Grant Searl's code. Created this Repository  
+
 2025-09-20 - Version 1.0 is running with a few modifications, so I've created Version 1.1 of schematics and PCB. I've added some basic examples, currently you have to copy and paste into the serial terminal. Current memory map is the same as Grants;
 0000-7FFF 32K RAM
 8000-9FFF FREE SPACE (8K)
 A000-BFFF SERIAL INTERFACE (minimally decoded)
 C000-FFFF 16K ROM (BASIC from C000 TO DED3, serial routines FF00 to FFFF)
 It's also not very stable just yet. I do sometimes get corruption in the data to/from the serial console.
+
 2025-09-21 - Version 1.1 Schematic and PCB uploaded. A lot of changes and simplicifcation in some ways, A simpler CPU board (direct link to FT245R, 74161 removed and some tidying of tracks). Fixed a couple of floating inputs to RAM/ROM
 VIA is much simpler, having just the one VIA chip. POWER board has USB-PD and a 24VDC input for higher power stuff in the future. These three PCBs have been orderred.
+
 2025-10-02 - V1.1 CPU board needed a couple of mods, I forgot that one of the pins that I used as input before had become output but the CPLD could not support that. New CPLD code done. **Now runs with a 12MHz clock (6MHz CPU speed)**, I found without the VIA it ran with a 16MHz clock fine, but would not run with a 20MHz clock, I suspect this is down to the FT245. This may get resolved when I add clock stretching to the CPLD. **VIA V1.1 working fine!** CPU board modded and Schematics and PCB updated, CPLD code for VIA and CPU updated. Updated memory map below
 
 
