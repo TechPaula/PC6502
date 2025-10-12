@@ -1251,178 +1251,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Oscillator:CXO_DIP8"
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "X"
-				(at -5.08 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "CXO_DIP8"
-				(at 1.27 -6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Oscillator:Oscillator_DIP-8"
-				(at 11.43 -8.89 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf"
-				(at -2.54 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Crystal Clock Oscillator, DIP8-style metal package"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "Crystal Clock Oscillator"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Oscillator*DIP*8*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "CXO_DIP8_0_1"
-				(rectangle
-					(start -5.08 5.08)
-					(end 5.08 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.905 -0.635) (xy -1.27 -0.635) (xy -1.27 0.635) (xy -0.635 0.635) (xy -0.635 -0.635) (xy 0 -0.635)
-						(xy 0 0.635) (xy 0.635 0.635) (xy 0.635 -0.635)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "CXO_DIP8_1_1"
-				(pin input line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "EN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 7.62 270)
-					(length 2.54)
-					(name "Vcc"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "OUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+5V"
 			(power)
 			(pin_names
@@ -1644,22 +1472,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "3.579MHz\n"
-		(exclude_from_sim no)
-		(at 182.372 140.208 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "f1735e86-44c2-47af-8db9-2661a20d4445")
-	)
-	(junction
-		(at 170.18 113.03)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "39afeb2b-50b6-429b-99f1-7fe210b0d52d")
-	)
 	(junction
 		(at 233.68 99.06)
 		(diameter 0)
@@ -1671,12 +1483,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4559c746-097a-43a9-9c65-e7f59ad73543")
-	)
-	(junction
-		(at 153.67 135.89)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5faaa164-beb7-4ff7-a6e2-20d71a332822")
 	)
 	(junction
 		(at 121.92 59.69)
@@ -1814,16 +1620,6 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 86.36) (xy 153.67 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "22480900-da98-426d-b31f-a1e74f7e08c4")
-	)
-	(wire
-		(pts
 			(xy 214.63 125.73) (xy 214.63 128.27)
 		)
 		(stroke
@@ -1894,26 +1690,6 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 121.92) (xy 182.88 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "46f1c298-863e-4021-8c4a-3e03990cd80f")
-	)
-	(wire
-		(pts
-			(xy 170.18 109.22) (xy 170.18 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "47e59242-2e1c-4082-87b1-9f92320bee6f")
-	)
-	(wire
-		(pts
 			(xy 52.07 63.5) (xy 76.2 63.5)
 		)
 		(stroke
@@ -1941,16 +1717,6 @@
 			(type default)
 		)
 		(uuid "54ba0c61-1fc0-479f-9f3a-929c78f317bd")
-	)
-	(wire
-		(pts
-			(xy 165.1 113.03) (xy 170.18 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "60c236ca-276c-4a32-b9bc-f115ddefd2d9")
 	)
 	(wire
 		(pts
@@ -2004,7 +1770,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 153.67) (xy 153.67 135.89)
+			(xy 153.67 86.36) (xy 153.67 153.67)
 		)
 		(stroke
 			(width 0)
@@ -2214,16 +1980,6 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 143.51) (xy 170.18 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b05d421c-bda3-4fec-8a1b-2bb466669a9f")
-	)
-	(wire
-		(pts
 			(xy 76.2 67.31) (xy 53.34 67.31)
 		)
 		(stroke
@@ -2244,16 +2000,6 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 135.89) (xy 182.88 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bc7b3865-c29d-4d7c-9d79-449bca00b56d")
-	)
-	(wire
-		(pts
 			(xy 252.73 77.47) (xy 245.11 77.47)
 		)
 		(stroke
@@ -2271,16 +2017,6 @@
 			(type default)
 		)
 		(uuid "cc29d1c5-fb84-45d3-b3ce-3f0129c12228")
-	)
-	(wire
-		(pts
-			(xy 153.67 135.89) (xy 162.56 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d1101dd5-397a-4c08-9152-05fbb688c90f")
 	)
 	(wire
 		(pts
@@ -2334,16 +2070,6 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 135.89) (xy 182.88 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ea2cb0fc-bcf9-4ea1-a29a-1b9427d92216")
-	)
-	(wire
-		(pts
 			(xy 76.2 82.55) (xy 53.34 82.55)
 		)
 		(stroke
@@ -2361,16 +2087,6 @@
 			(type default)
 		)
 		(uuid "f224c154-e610-4104-be1b-886fa844ead2")
-	)
-	(wire
-		(pts
-			(xy 170.18 113.03) (xy 170.18 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f854dfcf-2546-4e98-ab4f-e2737956f6c1")
 	)
 	(wire
 		(pts
@@ -2588,71 +2304,6 @@
 		(uuid "f84f98ff-e132-4e9a-9cd9-9246e9e8d3ac")
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 182.88 121.92 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0beaac79-a6c3-4517-885f-4c31ba9289f9")
-		(property "Reference" "#PWR042"
-			(at 182.88 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 182.88 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 182.88 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 182.88 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 182.88 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2c2e515d-9320-4feb-aca5-9280ca14dc43")
-		)
-		(instances
-			(project "PC6502-FM-SPEECH"
-				(path "/431ed1ef-9b76-40e5-9f99-258de85faf41/f76dd0b6-8d4f-4054-8a53-13f969db2124"
-					(reference "#PWR042")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Polarized")
 		(at 241.3 77.47 90)
 		(unit 1)
@@ -2731,72 +2382,6 @@
 			(project "PC6502-FM-SPEECH"
 				(path "/431ed1ef-9b76-40e5-9f99-258de85faf41/f76dd0b6-8d4f-4054-8a53-13f969db2124"
 					(reference "C11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 165.1 120.65 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2d8c0494-dee0-4f3a-9574-e060e38854ec")
-		(property "Reference" "#PWR039"
-			(at 165.1 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 165.1 125.2125 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 165.1 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 165.1 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a6823b21-9080-472a-be5d-1e7afedff3b2")
-		)
-		(instances
-			(project "PC6502-FM-SPEECH"
-				(path "/431ed1ef-9b76-40e5-9f99-258de85faf41/f76dd0b6-8d4f-4054-8a53-13f969db2124"
-					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -3135,168 +2720,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 165.1 116.84 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4a267fdf-1f57-4fc9-b3a8-bc9b0816b48c")
-		(property "Reference" "C7"
-			(at 164.465 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1u"
-			(at 164.465 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 164.1348 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 165.1 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 165.1 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ManufacturerPN" "C0603C104K3RAC7867"
-			(at 165.1 116.84 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Kemet"
-			(at 165.1 116.84 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" ""
-			(at 165.1 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7bd48a8b-0aa0-44be-9508-44ca12ca578c")
-		)
-		(pin "2"
-			(uuid "0e3f7ec5-84e0-477d-a4bc-5f54150fbe5f")
-		)
-		(instances
-			(project "PC6502-FM-SPEECH"
-				(path "/431ed1ef-9b76-40e5-9f99-258de85faf41/f76dd0b6-8d4f-4054-8a53-13f969db2124"
-					(reference "C7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 170.18 146.05 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "55171821-5255-4213-b2d2-0914f71f2092")
-		(property "Reference" "#PWR041"
-			(at 170.18 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 170.18 150.6125 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 170.18 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 170.18 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f9f7e646-2338-4553-8e05-1f5ce359d472")
-		)
-		(instances
-			(project "PC6502-FM-SPEECH"
-				(path "/431ed1ef-9b76-40e5-9f99-258de85faf41/f76dd0b6-8d4f-4054-8a53-13f969db2124"
-					(reference "#PWR041")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Polarized")
 		(at 240.03 99.06 90)
 		(unit 1)
@@ -3538,7 +2961,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "7f5ee712-db9d-430d-94bc-5477ee7d81c8")
 		(property "Reference" "R5"
 			(at 109.22 97.79 90)
@@ -4760,154 +4183,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Oscillator:CXO_DIP8")
-		(at 170.18 135.89 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(uuid "c8c32628-0476-4cc4-9f59-e37b90d87688")
-		(property "Reference" "X2"
-			(at 167.64 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "CXO_DIP8"
-			(at 163.83 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Oscillator:Oscillator_DIP-8"
-			(at 158.75 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf"
-			(at 172.72 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 170.18 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "DNF"
-			(at 170.18 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9c9dc3a5-a82e-4648-af3d-6d1b5bbdbd74")
-		)
-		(pin "4"
-			(uuid "dcf1ff16-fa0e-48d8-ad0a-49845dcd70af")
-		)
-		(pin "5"
-			(uuid "66b1d91c-091c-4703-b3f1-10ffc807ad10")
-		)
-		(pin "8"
-			(uuid "a559fc71-6aa6-48ea-9a51-da4e69c778f9")
-		)
-		(instances
-			(project "PC6502-FM-SPEECH"
-				(path "/431ed1ef-9b76-40e5-9f99-258de85faf41/f76dd0b6-8d4f-4054-8a53-13f969db2124"
-					(reference "X2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 170.18 109.22 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cbee6e90-abc7-495a-92d2-bcb385456fcf")
-		(property "Reference" "#PWR040"
-			(at 170.18 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 170.18 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 170.18 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 170.18 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "32601543-02d4-47c7-8514-647d54f4b392")
-		)
-		(instances
-			(project "PC6502-FM-SPEECH"
-				(path "/431ed1ef-9b76-40e5-9f99-258de85faf41/f76dd0b6-8d4f-4054-8a53-13f969db2124"
-					(reference "#PWR040")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5V")
 		(at 121.92 44.45 0)
 		(unit 1)
@@ -5118,84 +4393,6 @@
 			(project "PC6502-FM-SPEECH"
 				(path "/431ed1ef-9b76-40e5-9f99-258de85faf41/f76dd0b6-8d4f-4054-8a53-13f969db2124"
 					(reference "#PWR030")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 182.88 128.27 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "dabef7a6-f59d-42ab-a4cb-11f4719a0020")
-		(property "Reference" "R7"
-			(at 185.42 126.9999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3K3"
-			(at 185.42 129.5399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 181.102 128.27 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 182.88 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 182.88 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C25890"
-			(at 182.88 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ceb2755e-4c3b-4429-b197-d9a66968af9c")
-		)
-		(pin "2"
-			(uuid "d882d2ee-2681-473a-a6a0-1f7c42b6e4e5")
-		)
-		(instances
-			(project "PC6502-FM-SPEECH"
-				(path "/431ed1ef-9b76-40e5-9f99-258de85faf41/f76dd0b6-8d4f-4054-8a53-13f969db2124"
-					(reference "R7")
 					(unit 1)
 				)
 			)

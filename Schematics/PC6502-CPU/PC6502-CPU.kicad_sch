@@ -8817,26 +8817,6 @@
 		)
 		(uuid "e2e2a381-f2f7-4e52-96b9-e98dde32c412")
 	)
-	(text_box "TODO:\n\n1. Fix Silkscreen for SLOW1 & IRQ & CONSOLE\n"
-		(exclude_from_sim no)
-		(at -83.82 118.11 0)
-		(size 86.36 41.91)
-		(margins 0.9525 0.9525 0.9525 0.9525)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "d45beb9c-acfa-4139-bfa8-b863541892ce")
-	)
 	(junction
 		(at 189.23 229.87)
 		(diameter 0)
@@ -27112,7 +27092,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e16440d9-829d-41bb-a3f0-dffdc1d1472d")
 		(property "Reference" "R21"
