@@ -93,7 +93,7 @@ I expect frequent changes as I add/remove things. Everything should have at leas
 
 ### Things in build & test
 * **FM & SPEECH Board**: Featuring a YM262 and DAC (I have a couple of spares) and an SP0256-AL2 chip, just because, why not?
-* **Dual SPI board **: Featuring two SPI interfaces, based on https://sbc.rictor.org/65spi2.html
+* **Dual SPI board**: Featuring two SPI interfaces, based on https://sbc.rictor.org/65spi2.html
 * **Compact Flash board**: gotta have some storage, after all copying and pasting between my laptop and PC6502 is getting boring
 * **Dual Slot Apple II board**: A board that hosts Slot0 and Slot1 from an apple II, it only has the 5V rail though
 
