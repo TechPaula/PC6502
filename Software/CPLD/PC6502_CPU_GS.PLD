@@ -7,6 +7,10 @@ Company  ;
 Assembly ;
 Location ;
 Device	f1502ispplcc44;
+/*****************************************************/
+/* Thanks to Shonky for the work sorting the FT245 so that the CPU runs quicker */
+/* As a result the CPU can now run at 14MHz ! */
+
 
 /*****************************************************/
 /* Inputs */
@@ -79,16 +83,21 @@ CONSOLE_CS = A15 & !A14 & A13 & !A12 & !A11 & !A10 & !A9 & !A8 & !A7 & !A6 & !A5
 /*****************************************************/
 /* CPU Clock Generation */
 
+/* Uncomment this block to divide the clock */
 CPU_CLK.ar = RESET;
 CPU_CLK.sp = 'b'0;
 CPU_CLK.d = !CPU_CLK;
 CPU_CLK.ck = CLK;
 
 
+/* Comment out if dividing the clock 
+CPU_CLK = CLK; */
+
 /*****************************************************/
 /* Logic Equations */
 
 
+/* RAM/ROM bits */
 
 RW = CPU_CLK & !RnW;
 RD = CPU_CLK & RnW;
@@ -100,12 +109,14 @@ ROM_NR = RD;
 
 
 
-DLY_CLK = CPU_CLK & !CLK;		/* this gives me an actvie clock on second half of CPU clock */
 
 /* FT245 bits */
+/* If using a full speed passthrough clock, CLK can be used in the WR_FT logic
+   to save a few nanoseconds :-) No need to use any clock in the read logic
+*/
+RD_FT = CONSOLE_CS & A0 &  RnW;			/* 0xA001 */
+!WR_FT = CLK & CONSOLE_CS & A0 & !RnW;		/* 0xA001 */ 
 
-RD_FT = DLY_CLK & CONSOLE_CS & A0 &  RnW;		/* 0xA000 - 0xAFFF */
-WR_FT = DLY_CLK & CONSOLE_CS & A0 & !RnW;		/* 0xA000 - 0xAFFF */ 
 
 D0 = !RXF;				
 D1 = !TXE;			
@@ -113,16 +124,6 @@ D0.oe = CPU_CLK & CONSOLE_CS & !A0 & RnW;
 D1.oe = CPU_CLK & CONSOLE_CS & !A0 & RnW; 
 
 
-
-/*
-RD_FT = DLY_CLK & A15 & !A14 & A13 & !A12 & A0 &  RnW;		/* 0xA000 - 0xAFFF */
-WR_FT = DLY_CLK & A15 & !A14 & A13 & !A12 & A0 & !RnW;		/* 0xA000 - 0xAFFF */ 
-
-D0 = !RXF;				
-D1 = !TXE;			
-D0.oe = CPU_CLK & A15 & !A14 & A13 & !A12 & !A0 & RnW; 
-D1.oe = CPU_CLK & A15 & !A14 & A13 & !A12 & !A0 & RnW; 
-*/
 
 
 /* END OF FILE */

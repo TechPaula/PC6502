@@ -6494,6 +6494,26 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "REAR"
+		(exclude_from_sim no)
+		(at 127.762 28.702 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "46cc2371-055d-4720-8448-e678d000d256")
+	)
+	(text "FRONT\n"
+		(exclude_from_sim no)
+		(at 57.15 100.838 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "603283f0-8fb0-45e7-8c94-b5b4df6c95e4")
+	)
 	(text "CPU_CLK is the stretched\nversion of CLK. \nUse nSLOW0 and nSLOW1 to\nslow the clock down"
 		(exclude_from_sim no)
 		(at 264.16 141.986 0)
@@ -6503,6 +6523,16 @@
 			)
 		)
 		(uuid "8694d3bd-851c-4a3b-af90-b4bcb20c247d")
+	)
+	(text "FRONT\n"
+		(exclude_from_sim no)
+		(at 128.27 100.838 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "8afc3118-e686-4daa-8a43-6c3489bc4611")
 	)
 	(text "SPI2\n\n"
 		(exclude_from_sim no)
@@ -6523,6 +6553,16 @@
 			)
 		)
 		(uuid "bc1ec6da-bc9f-4ab5-a191-b603216138dc")
+	)
+	(text "REAR"
+		(exclude_from_sim no)
+		(at 57.15 27.432 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "dad9c607-bc3b-4b79-a750-7e4f8d68c5a2")
 	)
 	(text_box "Apple II PIn out taken from \nhttps://allpinouts.org/pinouts/connectors/buses/apple-ii-slot/\n\n7MHz won't be 7MHz most likely 6MHz\n\nAddress Range for Selects changed from Apple II\nnIOSEL. Active when page $An gets accessed. N.C. on slot 0\nnIOSTRV.  Active when $A800 and $AFFF gets accessed\nnDEVSEL. Active when $AFnX gets accessed; n - Slot#+8\n"
 		(exclude_from_sim no)
