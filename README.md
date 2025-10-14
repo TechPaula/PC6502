@@ -1,6 +1,6 @@
 # PC6502
 My 6502 project in a PC104 like form factor.  
-**This is VERY VERY unstable, I do not know what works and what doesn't, use at your own risk of sanity and wasted money/chips**  
+**This is unstable, some things work and and some don't, use at your own risk of sanity and wasted money/chips**  
 
 ## Status
 2025-09-08 - PCBs ordered, Parts ordered.  
@@ -19,6 +19,9 @@ VIA is much simpler, having just the one VIA chip. POWER board has USB-PD and a 
 
 2025-10-02 - V1.1 CPU board needed a couple of mods, I forgot that one of the pins that I used as input before had become output but the CPLD could not support that. New CPLD code done. **Now runs with a 12MHz clock (6MHz CPU speed)**, I found without the VIA it ran with a 16MHz clock fine, but would not run with a 20MHz clock, I suspect this is down to the FT245. This may get resolved when I add clock stretching to the CPLD. **VIA V1.1 working fine!** CPU board modded and Schematics and PCB updated, CPLD code for VIA and CPU updated. Updated memory map below
 
+2025-10-11 - Power board built, works great, however the switch is inadequate, so I've hard wired it
+
+2025-10-14 - CPLD code for the CPU PCB updated, with help from Shonky it now runs at up to the full 14MHz!
 
 ## CPU Board
 Actual PCB:
@@ -80,13 +83,20 @@ I expect frequent changes as I add/remove things. Everything should have at leas
 | 0xA09- | 0 - F | RW | 6522 VIA B | Datasheet - https://eater.net/datasheets/w65c22.pdf |
 | 0xA0A- | 0 - F | RW | 6522 VIA C |  |
 | 0xA0B- | 0 - F | RW | 6522 VIA D |  |
+| 0xA0C- | 0 - 3 | RW | SPI 0 | (shared PCB with SPI1)  |
+| 0xA0D- | 0 - 3 | RW | SPI 1 | (shared PCB with SPI0)  |
+| 0xA10- | 0     | W  | SP0256 speech synth | (shared PCB with OPL3) | 
+| 0xA10- | 1     | RW | SP0256 speech synth status/reset || 
+| 0xA11- | 0 - 3 | RW | OPL3 Chip - YM262 | (shared PCB with SP0256) | 
+| 0xA20- | 0 - 3 | RW | Compact Flash |  | 
 
 
-### Things to build
-* **Power Board**: This is currently on rev 1.0, it has a USB PD Chip (ST4500) and also a 24V DC input, the idea behind this is that if I want to run some heavy power things (e.g. transputers) then I'll need more than the 4W you get from a regular USB connection.
-
-### Things in progresss
+### Things in build & test
 * **FM & SPEECH Board**: Featuring a YM262 and DAC (I have a couple of spares) and an SP0256-AL2 chip, just because, why not?
+* **Dual SPI board **: Featuring two SPI interfaces, based on https://sbc.rictor.org/65spi2.html
+* **Compact Flash board**: gotta have some storage, after all copying and pasting between my laptop and PC6502 is getting boring
+* **Dual Slot Apple II board**: A board that hosts Slot0 and Slot1 from an apple II, it only has the 5V rail though
+
 
 ## The Future
 I have a bunch of things I want to try adding, some ideas I have are below, some may happen, some may not and they're not in any particular order;
