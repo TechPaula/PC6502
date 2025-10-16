@@ -4557,6 +4557,17 @@
 		)
 		(uuid "0c3e348a-9740-4f49-aa04-639026d7cd93")
 	)
+	(text "Speech chip reset BIT0 at address 0xA101\nSpeech chip data written to address 0xA100\nOPL3 chip select at address 0xA110"
+		(exclude_from_sim no)
+		(at 181.102 93.218 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0c82461c-ec86-4ed0-b86b-12fc9c961b76")
+	)
 	(text "SP_nRST seems to need a long pulse to reliably reset the chip"
 		(exclude_from_sim no)
 		(at 131.826 71.374 0)
@@ -4567,7 +4578,7 @@
 		)
 		(uuid "2c4c5c60-acb1-4e70-977e-f70cc7f29369")
 	)
-	(text "ROM"
+	(text "SPEECH\n"
 		(exclude_from_sim no)
 		(at 143.51 175.514 0)
 		(effects
@@ -4790,10 +4801,6 @@
 	(no_connect
 		(at 209.55 137.16)
 		(uuid "0b815a4c-77f2-457d-b9e9-8662db71f309")
-	)
-	(no_connect
-		(at 110.49 97.79)
-		(uuid "15c916de-5746-4d4a-8ed5-af53f648b5c5")
 	)
 	(no_connect
 		(at 140.97 105.41)
@@ -5053,6 +5060,15 @@
 			(type default)
 		)
 		(uuid "87a09820-3480-4507-bb06-946b66584df3")
+	)
+	(bus_entry
+		(at 93.98 97.79)
+		(size -2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e8949cc-2a4d-4c78-97ef-8d8cd8237d23")
 	)
 	(bus_entry
 		(at 93.98 120.65)
@@ -6107,6 +6123,16 @@
 	)
 	(wire
 		(pts
+			(xy 93.98 97.79) (xy 110.49 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5390992b-20b8-4e5c-b944-bf5d38f398a2")
+	)
+	(wire
+		(pts
 			(xy 64.77 99.06) (xy 50.8 99.06)
 		)
 		(stroke
@@ -6595,6 +6621,16 @@
 		)
 		(uuid "8a1f9a88-ed78-4653-a0d7-ad0998397517")
 	)
+	(bus
+		(pts
+			(xy 91.44 95.25) (xy 91.44 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8abc9a8e-12b8-455b-82e3-69b37e33ef90")
+	)
 	(wire
 		(pts
 			(xy 34.29 45.72) (xy 34.29 50.8)
@@ -6727,7 +6763,7 @@
 	)
 	(bus
 		(pts
-			(xy 91.44 19.05) (xy 91.44 107.95)
+			(xy 91.44 19.05) (xy 91.44 95.25)
 		)
 		(stroke
 			(width 0)
@@ -8264,6 +8300,16 @@
 			(justify right bottom)
 		)
 		(uuid "d7dbccf4-de48-48d8-ada4-6d9ab8857f1a")
+	)
+	(label "A0"
+		(at 96.52 97.79 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e25faa56-0cad-4b03-8465-83b00441a4cf")
 	)
 	(label "A4"
 		(at 99.06 110.49 180)

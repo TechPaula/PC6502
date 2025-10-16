@@ -1479,10 +1479,22 @@
 		(uuid "39b531d3-a83e-4548-98ad-d3b2a45f46ee")
 	)
 	(junction
+		(at 110.49 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3e0709ce-485f-448d-933b-39696803e53c")
+	)
+	(junction
 		(at 214.63 128.27)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4559c746-097a-43a9-9c65-e7f59ad73543")
+	)
+	(junction
+		(at 110.49 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5b130c3f-b255-48d9-9ad4-97eac586d18d")
 	)
 	(junction
 		(at 121.92 59.69)
@@ -1513,6 +1525,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ec4f6f10-aefb-4df9-914c-333860dbae2c")
+	)
+	(junction
+		(at 127 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fc8ec0a6-c7c7-4883-9af8-5d099a6f95f3")
 	)
 	(junction
 		(at 187.96 74.93)
@@ -1600,6 +1618,16 @@
 	)
 	(wire
 		(pts
+			(xy 110.49 113.03) (xy 110.49 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18a9c939-a030-4f15-9158-e9c010750e4c")
+	)
+	(wire
+		(pts
 			(xy 165.1 74.93) (xy 170.18 74.93)
 		)
 		(stroke
@@ -1617,6 +1645,16 @@
 			(type default)
 		)
 		(uuid "1e5c3c31-1894-4100-be18-00d9b41ebd1e")
+	)
+	(wire
+		(pts
+			(xy 127 116.84) (xy 130.81 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2036f6d7-0071-4454-8665-a77b570530f5")
 	)
 	(wire
 		(pts
@@ -1690,6 +1728,16 @@
 	)
 	(wire
 		(pts
+			(xy 110.49 116.84) (xy 127 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46c36d0a-e87f-4377-a648-4dd1ae94f8b0")
+	)
+	(wire
+		(pts
 			(xy 52.07 63.5) (xy 76.2 63.5)
 		)
 		(stroke
@@ -1727,6 +1775,16 @@
 			(type default)
 		)
 		(uuid "656846cf-6295-42a0-a494-0699998d1298")
+	)
+	(wire
+		(pts
+			(xy 110.49 113.03) (xy 114.3 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65c99425-d532-4e9a-87d4-693e77be5ba8")
 	)
 	(wire
 		(pts
@@ -1930,7 +1988,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 116.84) (xy 130.81 116.84)
+			(xy 105.41 116.84) (xy 110.49 116.84)
 		)
 		(stroke
 			(width 0)
@@ -2020,7 +2078,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 113.03) (xy 114.3 113.03)
+			(xy 105.41 113.03) (xy 110.49 113.03)
 		)
 		(stroke
 			(width 0)
@@ -3375,6 +3433,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 127 124.46 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8f11ec82-0f4e-4c27-8882-639f175e78bc")
+		(property "Reference" "#PWR065"
+			(at 127 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 127 129.0225 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 127 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 127 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "df967dca-73e8-435f-b80f-e0721ae953eb")
+		)
+		(instances
+			(project "PC6502-FM-SPEECH"
+				(path "/431ed1ef-9b76-40e5-9f99-258de85faf41/f76dd0b6-8d4f-4054-8a53-13f969db2124"
+					(reference "#PWR065")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 214.63 125.73 0)
 		(mirror y)
@@ -3458,7 +3582,7 @@
 				)
 			)
 		)
-		(property "Value" "0R"
+		(property "Value" "100K"
 			(at 134.62 114.808 90)
 			(effects
 				(font
@@ -3959,6 +4083,102 @@
 			(project "PC6502-FM-SPEECH"
 				(path "/431ed1ef-9b76-40e5-9f99-258de85faf41/f76dd0b6-8d4f-4054-8a53-13f969db2124"
 					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 127 120.65 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ba8f1c64-145f-44af-808a-a4f18916edf8")
+		(property "Reference" "C29"
+			(at 126.365 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1u"
+			(at 126.365 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 126.0348 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 127 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 127 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ManufacturerPN" "C0603C104K3RAC7867"
+			(at 127 120.65 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kemet"
+			(at 127 120.65 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 127 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ecc31ef3-58c5-4175-beaa-0fbe8549cc7a")
+		)
+		(pin "2"
+			(uuid "8b407c20-d260-4fd8-bac1-7f43c28cfbdf")
+		)
+		(instances
+			(project "PC6502-FM-SPEECH"
+				(path "/431ed1ef-9b76-40e5-9f99-258de85faf41/f76dd0b6-8d4f-4054-8a53-13f969db2124"
+					(reference "C29")
 					(unit 1)
 				)
 			)

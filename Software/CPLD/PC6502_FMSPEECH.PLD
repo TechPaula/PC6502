@@ -1,0 +1,113 @@
+Name     PC6502_FMSPEECH;
+PartNo   ;
+Date     2025;
+Revision ;
+Designer PaulaMaddox;
+Company  ;
+Assembly ;
+Location ;
+Device	f1502ispplcc44;
+/*****************************************************/
+
+
+/*****************************************************/
+/* Inputs */
+
+pin 5  = A0;
+pin 9  = A4;
+pin 12 = A5;
+pin 14 = A6;
+pin 16 = A7;
+pin 17 = A8;
+pin 18 = A9;
+pin 19 = A10;
+pin 25 = A11;
+pin 20 = A12;
+pin 21 = A13;
+pin 24 = A14;
+pin 26 = A15;
+
+pin 1  = RnW;
+pin 2  = CLK;
+pin 43 = CPU_CLK;
+pin 8  = !RESET;
+
+pin 41 = SP_OSC;
+pin 31 = !SP_RDY;        /* SP0256 ready */
+pin 29 = !SP_BSY;        /* SP0256 Busy */
+
+/*****************************************************/
+/* Outputs */
+
+pin 33 = !SP_ALD;       /* SP0256 load */
+pin 28 = SP_RST;       /* SP0256 Reset */
+pin 27 = SP_CLK;        /* clock to SP0256 */
+
+pin 4  = !OPL_CS;
+pin 37 = !OPL_RST;
+pin 40 = !OPL_W;
+pin 39 = !OPL_R;
+
+
+
+
+/*****************************************************/
+/* Input / output pins */
+pin 36 = D0;		
+pin 34 = D1;
+
+
+/*****************************************************/
+/* PINNODEs i.e. internal signals */
+
+PINNODE = SP_CS;
+
+
+
+
+/*****************************************************/
+/* Address Decode */
+
+SP_CS  = A15 & !A14 & A13 & !A12 & !A11 & !A10 & !A9 & A8 & !A7 & !A6 & !A5 & !A4;              /* 0xA10n */
+OPL_CS = A15 & !A14 & A13 & !A12 & !A11 & !A10 & !A9 & A8 & !A7 & !A6 & !A5 & A4;               /* 0xA11n */
+
+
+/*****************************************************/
+/* SP0256 bits */
+
+/* SP load pin active ONLY on write to 0xA100 */
+SP_ALD = !RnW & SP_CS & !A0; 
+
+
+/* Use this when using a 6MHz oscillator module to give 3MHz */
+SP_CLK.ar = RESET;
+SP_CLK.sp = 'b'0;
+SP_CLK.d = !SP_CLK;
+SP_CLK.ck = SP_OSC;
+
+/* Latch for SP Reset */
+SP_RST.ar = RESET;
+SP_RST.d  = D0;
+SP_RST.ck = !RnW & SP_CS & A0 & !CPU_CLK;
+
+
+/* read SP0256 status */
+D0 = SP_RDY;
+D0.oe = SP_CS & RnW;
+
+D1 = SP_BSY;
+D1.oe = SP_CS & RnW;
+
+
+
+
+/*****************************************************/
+/* OPL3 bits */
+
+OPL_W = !RnW;
+OPL_R = RnW;
+OPL_RST = RESET;
+
+
+/* END OF FILE */
+/*****************************************************/
