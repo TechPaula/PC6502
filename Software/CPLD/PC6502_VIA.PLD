@@ -11,6 +11,7 @@ Device	f1502ispplcc44;
 /*****************************************************/
 /* Inputs */
 
+pin 8  = !RESET;
 pin 9  = A4;
 pin 12 = A5;
 pin 14 = A6;
@@ -25,7 +26,8 @@ pin 24 = A14;
 pin 26 = A15;
 
 pin 4  = RnW;
-pin 2  = CLK;				/* System clock */
+pin 2  = SYS_CLK;				/* System clock */
+pin 41 = CPU_CLK;
 
 pin 5  = !VIASEL0;
 pin 11 = !VIASEL1;
@@ -37,8 +39,9 @@ pin 39 = !VIASEL3;
 /* Outputs */
 
 pin 33 = !VIA_nCS;
-pin 40 = VIA_CLK;
 pin 28 = !VIA_LED;
+
+pin 40 = VIA_CLK;
 
 /*****************************************************/
 /* Pinnodes */
@@ -64,6 +67,18 @@ VIA_LED = VIA_nCS;
 
 
 /*****************************************************/
+/* VIA CLK */
+
+/*
+VIA_CLK.ar = RESET;
+VIA_CLK.ck = CLK;
+VIA_CLK.d = !VIA_CLK;
+*/
+
+VIA_CLK = SYS_CLK;
+
+
+/*****************************************************/
 /* Logic Equations */
 
 VIA1 = VIASEL0 & !A5 & !A4;		/* BASE ADDRESS = 0xA080 */
@@ -72,7 +87,9 @@ VIA3 = VIASEL2 &  A5 & !A4;       /* BASE ADDRESS = 0xA0A0 */
 VIA4 = VIASEL3 &  A5 &  A4;		/* BASE ADDRESS = 0xA0B0 */
 
 
-VIA_CLK = CLK;
+
+
+
 
 
 /* END OF FILE */

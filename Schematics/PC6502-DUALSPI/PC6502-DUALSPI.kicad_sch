@@ -4600,6 +4600,14 @@
 		(uuid "a2f67b48-c618-480a-94f4-4c8cca876757")
 	)
 	(no_connect
+		(at 157.48 99.06)
+		(uuid "a82ed1c6-a069-4f76-b495-c38945f31723")
+	)
+	(no_connect
+		(at 157.48 96.52)
+		(uuid "c2adfef4-8705-468c-b508-f13f55ab673b")
+	)
+	(no_connect
 		(at 157.48 129.54)
 		(uuid "c2c2a508-9377-4f8f-ba23-d4d594956ef9")
 	)
@@ -5218,16 +5226,6 @@
 			(type default)
 		)
 		(uuid "07f283e5-b0e1-4924-a0a2-960c5b27f691")
-	)
-	(wire
-		(pts
-			(xy 157.48 96.52) (xy 170.18 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0abb3b8b-94db-4939-8658-5593d6771fd1")
 	)
 	(wire
 		(pts
@@ -6888,16 +6886,6 @@
 			(type default)
 		)
 		(uuid "be6c10f3-9e90-485c-be5f-3e6f9fc3cc83")
-	)
-	(wire
-		(pts
-			(xy 157.48 99.06) (xy 162.56 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "be960f7e-351d-46b9-9e6d-04ae6515d675")
 	)
 	(wire
 		(pts
@@ -8721,50 +8709,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "VIA_SEL3"
-		(shape input)
-		(at 162.56 99.06 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b60217fe-ac01-496c-bca7-4b3514d94b8d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 173.8909 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "VIA_CLK"
-		(shape output)
-		(at 170.18 96.52 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "bbc7ba87-0e90-436a-a677-f44d8f7d62e9")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 180.4829 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
