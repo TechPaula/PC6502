@@ -1,4 +1,6 @@
 # PC6502
+![PC6502 CPU board](/Images/FullStack.jpg?raw=true "The PC6502 Stack, work in progess")
+
 My 6502 project in a PC104 like form factor.  
 **This is unstable, some things work and and some don't, use at your own risk of sanity and wasted money/chips**  
 
@@ -25,10 +27,14 @@ VIA is much simpler, having just the one VIA chip. POWER board has USB-PD and a 
 
 2025-10-16 - SPEECH synthesis chip working fine after a couple of extra wires on V1.0 of the PCB, V1.1 has been updated with these.
 
+2025-10-19 - Dual SPI board confirmed working!
+It looks like my Apple II slots might be bacwards, I need to do more checking to confirm one way or the other.
+The Compact Flash Storage board looks like it's also working, at least as far as raw byte reads are concerned. but more testing is needed.
+
 ## CPU Board
 Actual PCB:
 
-![PC6502 CPU board](/Images/PC6502_CPU_V11.jpg?raw=true "AV1.1 PC6502 CPU board undergoing testing")
+![PC6502 CPU board](/Images/PC6502_CPU_V11.jpg?raw=true "A V1.1 PC6502 CPU board undergoing testing")
 
 Mandlebrot Code:
 
@@ -43,6 +49,21 @@ This board has a single 6522 VIA and an ATF1502 for address decoding, The VIA ou
 The CPLD code and .JED files are in /Software/CPLD
 
 ![PC6502 VIA board](/Images/PC6502_VIA_V11.jpg?raw=true "V1.1 PC6502 VIA board undergoing testing")
+
+
+## Dual SPI board
+Featuring two SPI interfaces, based on https://sbc.rictor.org/65spi2.html.
+This uses two ATF1504AS and a single ATF1502AS.
+(Note: in the picture I'm using the wrong ATF1504s, oops)
+
+![PC6502 VIA board](/Images/PC6502_DualSPI.jpg?raw=true "Dual SPI board")
+
+
+## Compact Flash board
+A Very simple board in terms of electronics. This is currently reading from the compact flash card, at least as far as raw bytes go.
+
+![PC6502 VIA board](/Images/PC6502_Storage.jpg?raw=true "Compact Flash storage card")
+
 
 
 ### Memory Map
@@ -90,12 +111,13 @@ I expect frequent changes as I add/remove things. Everything should have at leas
 | 0xA10- | 0     | W  | SP0256 speech synth | (shared PCB with OPL3) | 
 | 0xA10- | 1     | RW | SP0256 speech synth status/reset || 
 | 0xA11- | 0 - 3 | RW | OPL3 Chip - YM262 | (shared PCB with SP0256) | 
-| 0xA20- | 0 - 3 | RW | Compact Flash |  | 
+| 0xA20- | 0 - 7 | RW | Compact Flash |  | 
+
+
 
 
 ### Things in build & test
 * **FM & SPEECH Board**: Featuring a YM262 and DAC (I have a couple of spares) and an SP0256-AL2 chip, just because, why not?
-* **Dual SPI board**: Featuring two SPI interfaces, based on https://sbc.rictor.org/65spi2.html
 * **Compact Flash board**: gotta have some storage, after all copying and pasting between my laptop and PC6502 is getting boring
 * **Dual Slot Apple II board**: A board that hosts Slot0 and Slot1 from an apple II, it only has the 5V rail though
 
