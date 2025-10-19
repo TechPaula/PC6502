@@ -25,11 +25,12 @@ VIA is much simpler, having just the one VIA chip. POWER board has USB-PD and a 
 
 2025-10-14 - CPLD code for the CPU PCB updated, with help from Shonky it now runs at up to the full 14MHz!
 
-2025-10-16 - SPEECH synthesis chip working fine after a couple of extra wires on V1.0 of the PCB, V1.1 has been updated with these.
+2025-10-16 - SPEECH synthesis chip working fine after a couple of extra wires on V1.0 of the PCB, V1.1 has been updated with these. The OPL3 (YMF262) is reading and writing, but not yet making sound.
 
 2025-10-19 - Dual SPI board confirmed working!
 It looks like my Apple II slots might be bacwards, I need to do more checking to confirm one way or the other.
-The Compact Flash Storage board looks like it's also working, at least as far as raw byte reads are concerned. but more testing is needed.
+The Compact Flash Storage board is also working, at least as far as raw byte reads and reads are concerned.
+
 
 ## CPU Board
 Actual PCB:
@@ -43,6 +44,7 @@ Mandlebrot Code:
 
 This board has a 6502, RAM and ROM on board, along with an ATF1502 for address decoding. There is also an FT245R which is pretending to be a 68B50 with USB. 
 The CPLD code and .JED files are in /Software/CPLD
+
 
 ## VIA Board
 This board has a single 6522 VIA and an ATF1502 for address decoding, The VIA outputs are brought out to PMOD style headers (though are 5V)
@@ -60,9 +62,15 @@ This uses two ATF1504AS and a single ATF1502AS.
 
 
 ## Compact Flash board
-A Very simple board in terms of electronics. This is currently reading from the compact flash card, at least as far as raw bytes go.
+A Very simple board in terms of electronics. Reading and Writing raw bytes is working!.
 
 ![PC6502 VIA board](/Images/PC6502_Storage.jpg?raw=true "Compact Flash storage card")
+
+
+## FM(OPL3) and SPEECH card
+So far the speech engine is working great, and I can read/write from/to the OPL3, I can't seem to get any sound from the OPL3 yet.
+
+![PC6502 VIA board](/Images/PC6502_FM_Speech.jpg?raw=true "FM and speech card")
 
 
 
@@ -118,7 +126,6 @@ I expect frequent changes as I add/remove things. Everything should have at leas
 
 ### Things in build & test
 * **FM & SPEECH Board**: Featuring a YM262 and DAC (I have a couple of spares) and an SP0256-AL2 chip, just because, why not?
-* **Compact Flash board**: gotta have some storage, after all copying and pasting between my laptop and PC6502 is getting boring
 * **Dual Slot Apple II board**: A board that hosts Slot0 and Slot1 from an apple II, it only has the 5V rail though
 
 
