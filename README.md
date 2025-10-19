@@ -23,7 +23,7 @@ VIA is much simpler, having just the one VIA chip. POWER board has USB-PD and a 
 
 2025-10-11 - Power board built, works great, however the switch is inadequate, so I've hard wired it
 
-2025-10-14 - CPLD code for the CPU PCB updated, with help from Shonky it now runs at up to the full 14MHz!
+2025-10-14 - CPLD code for the CPU PCB updated, with help from Shonky it now runs at up to the full 14MHz and also will do clock stretching when using SLOW1 line. The SLOW0 line is still bring problematic.
 
 2025-10-16 - SPEECH synthesis chip working fine after a couple of extra wires on V1.0 of the PCB, V1.1 has been updated with these. The OPL3 (YMF262) is reading and writing, but not yet making sound.
 
