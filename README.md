@@ -31,6 +31,9 @@ VIA is much simpler, having just the one VIA chip. POWER board has USB-PD and a 
 It looks like my Apple II slots might be bacwards, I need to do more checking to confirm one way or the other.
 The Compact Flash Storage board is also working, at least as far as raw byte reads and reads are concerned.
 
+2025-10-23 - OPL3 Now working! I've made a change to the PCB and Schematics to fix the problem.
+The CPU Board has also had a change this allows Clock stretching to be added. Currently only the SLOW1 input is working, but I will add the other later.
+CPLD code for the compact flash board, updated VIA CPLD code and updated CPU CPLD code are now in.
 
 ## CPU Board
 Actual PCB:
@@ -125,7 +128,6 @@ I expect frequent changes as I add/remove things. Everything should have at leas
 
 
 ### Things in build & test
-* **FM & SPEECH Board**: Featuring a YM262 and DAC (I have a couple of spares) and an SP0256-AL2 chip, just because, why not?
 * **Dual Slot Apple II board**: A board that hosts Slot0 and Slot1 from an apple II, it only has the 5V rail though
 
 
