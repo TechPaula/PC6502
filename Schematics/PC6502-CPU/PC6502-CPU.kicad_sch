@@ -8687,9 +8687,9 @@
 		)
 		(uuid "4ffeec86-4e5d-49dd-bba7-1ac273233084")
 	)
-	(text "A15 and A16 allow me to do\nBanked memory if want"
+	(text "A15 allows me to do\nBanked memory if want"
 		(exclude_from_sim no)
-		(at 210.82 171.704 0)
+		(at 225.044 162.56 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8978,12 +8978,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5951ea9a-67d9-4676-a0f4-0dabc7d69744")
-	)
-	(junction
-		(at 161.29 82.55)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5bd6491c-a4fc-49d3-aa23-80c3ff1be6c8")
 	)
 	(junction
 		(at 358.14 170.18)
@@ -10423,6 +10417,16 @@
 	)
 	(wire
 		(pts
+			(xy 261.62 93.98) (xy 264.16 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "042c4a06-e3a3-4b0f-92cf-95f0312926ef")
+	)
+	(wire
+		(pts
 			(xy 266.7 209.55) (xy 270.51 209.55)
 		)
 		(stroke
@@ -10440,16 +10444,6 @@
 			(type default)
 		)
 		(uuid "058dead7-e50c-451c-be99-70c9922932e2")
-	)
-	(wire
-		(pts
-			(xy 149.86 82.55) (xy 161.29 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05ac8dcd-6b8f-4ded-b9f6-793f9dfb0a54")
 	)
 	(wire
 		(pts
@@ -10810,6 +10804,16 @@
 			(type default)
 		)
 		(uuid "17f1ac79-4b1f-42e2-903d-6a4708b083fc")
+	)
+	(wire
+		(pts
+			(xy 261.62 100.33) (xy 261.62 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "183dea13-6e51-4753-83d3-2a9d699e653c")
 	)
 	(wire
 		(pts
@@ -11670,16 +11674,6 @@
 			(type default)
 		)
 		(uuid "3ceff1ff-71f0-4f7f-b71a-73454bc31e5b")
-	)
-	(wire
-		(pts
-			(xy 137.16 134.62) (xy 140.97 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3cfa4722-0bef-4c21-a109-344fb8cbbaab")
 	)
 	(wire
 		(pts
@@ -14213,16 +14207,6 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 154.94) (xy 182.88 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b6fa0e50-d8fc-4635-b0d9-d4ebd0e4d4b1")
-	)
-	(wire
-		(pts
 			(xy 161.29 232.41) (xy 185.42 232.41)
 		)
 		(stroke
@@ -14953,13 +14937,13 @@
 	)
 	(wire
 		(pts
-			(xy 260.35 93.98) (xy 264.16 93.98)
+			(xy 171.45 154.94) (xy 209.55 154.94)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d8661616-80b3-420f-83b3-ca40475c733a")
+		(uuid "d775d099-75f6-453b-99ec-594f11db54de")
 	)
 	(bus
 		(pts
@@ -16857,28 +16841,6 @@
 			)
 		)
 	)
-	(global_label "SYSCLK"
-		(shape output)
-		(at 128.27 236.22 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0546d82a-c964-44c6-87f4-d0d2aaef2f6f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 138.3309 236.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SYNQ"
 		(shape input)
 		(at 367.03 177.8 0)
@@ -16923,9 +16885,9 @@
 			)
 		)
 	)
-	(global_label "RAM_A16"
+	(global_label "ROM_nR"
 		(shape input)
-		(at 149.86 82.55 180)
+		(at 161.29 222.25 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -16933,9 +16895,9 @@
 			)
 			(justify right)
 		)
-		(uuid "0af254e8-9555-461b-8d25-b9ceb74dec92")
+		(uuid "0d9f58b5-c183-43f8-9fcc-765de25df7a3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 138.5896 82.55 0)
+			(at 150.8663 222.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16963,6 +16925,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "CLK_x2"
+		(shape output)
+		(at 128.27 236.22 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1260badb-08fe-4b1f-b980-d89339e0f7d4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 138.0285 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -17095,28 +17079,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "nROM_CS"
-		(shape input)
-		(at 260.35 93.98 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "3b979dea-f228-47b1-95e6-f212c44362fc")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 248.7168 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)
@@ -17409,22 +17371,22 @@
 	)
 	(global_label "nSLOW0"
 		(shape input)
-		(at 137.16 134.62 180)
+		(at 201.93 167.64 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "6b44adb6-f853-4634-b11f-3e9a6de5e1cb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 126.7968 134.62 0)
+			(at 212.2932 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -17447,28 +17409,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "nROM_CS"
-		(shape input)
-		(at 161.29 222.25 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "6ea3d331-572a-4bca-8510-6a822f8badc4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 149.6568 222.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)
@@ -17557,28 +17497,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "nROM_CS"
-		(shape output)
-		(at 182.88 154.94 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "7c85e297-f564-4069-b160-c350cd0ed524")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 194.5132 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -17715,28 +17633,6 @@
 			)
 		)
 	)
-	(global_label "RAM_A16"
-		(shape output)
-		(at 201.93 167.64 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9abba59e-9638-4dd7-b1b5-c6a27b2fe368")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 213.2004 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SYNQ"
 		(shape output)
 		(at 113.03 90.17 0)
@@ -17777,6 +17673,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SYSCLK"
+		(shape output)
+		(at 209.55 154.94 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a53be9cd-5874-4b20-9b2c-e603033dc361")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 219.6109 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -18067,7 +17985,7 @@
 			)
 		)
 	)
-	(global_label "SYSCLK"
+	(global_label "CLK_x2"
 		(shape input)
 		(at 179.07 134.62 0)
 		(fields_autoplaced yes)
@@ -18079,7 +17997,7 @@
 		)
 		(uuid "d9620dff-3c7d-4ae5-a4d3-9e4af4e712ca")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 189.1309 134.62 0)
+			(at 188.8285 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20216,7 +20134,7 @@
 		(fields_autoplaced yes)
 		(uuid "3092e1bb-db85-41a8-bfe1-b3c28a4b3f37")
 		(property "Reference" "U4"
-			(at 158.3533 120.65 0)
+			(at 158.3533 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20224,8 +20142,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ATF1502AS"
-			(at 158.3533 123.19 0)
+		(property "Value" "ATF1504AS"
+			(at 158.3533 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20690,6 +20608,70 @@
 			(project "PC6502-CPU"
 				(path "/f3365b77-bdc1-4fa0-8030-841dab6ab2be"
 					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 261.62 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3cfaa18c-0a11-425f-9c3c-6d4ed00600a9")
+		(property "Reference" "#PWR052"
+			(at 261.62 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 261.62 104.8925 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 261.62 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 261.62 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 261.62 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "437bbd08-d753-4895-819f-d671464997a1")
+		)
+		(instances
+			(project "PC6502-CPU"
+				(path "/f3365b77-bdc1-4fa0-8030-841dab6ab2be"
+					(reference "#PWR052")
 					(unit 1)
 				)
 			)
