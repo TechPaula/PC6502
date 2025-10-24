@@ -1516,6 +1516,16 @@
 	)
 	(wire
 		(pts
+			(xy 218.44 88.9) (xy 176.53 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02dbebc8-cc0e-43da-bd96-c706f616f17e")
+	)
+	(wire
+		(pts
 			(xy 97.79 171.45) (xy 97.79 180.34)
 		)
 		(stroke
@@ -1746,6 +1756,16 @@
 	)
 	(wire
 		(pts
+			(xy 176.53 88.9) (xy 176.53 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ffd36f1-8ab7-472b-978d-61f58603906d")
+	)
+	(wire
+		(pts
 			(xy 167.64 105.41) (xy 167.64 168.91)
 		)
 		(stroke
@@ -1843,26 +1863,6 @@
 			(type default)
 		)
 		(uuid "6790fee7-b262-49de-a412-1eb19cc9d51c")
-	)
-	(wire
-		(pts
-			(xy 187.96 102.87) (xy 176.53 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6a221a5c-30b0-4596-8b29-ad3f4cb2ae26")
-	)
-	(wire
-		(pts
-			(xy 176.53 102.87) (xy 176.53 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6ee3b5f8-6277-4b49-aec9-a80f114633c6")
 	)
 	(wire
 		(pts
@@ -2036,7 +2036,7 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 102.87) (xy 222.25 107.95)
+			(xy 184.15 107.95) (xy 184.15 119.38)
 		)
 		(stroke
 			(width 0)
@@ -2176,16 +2176,6 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 102.87) (xy 222.25 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca79a172-f8b0-44c1-b68b-4421c86b9e92")
-	)
-	(wire
-		(pts
 			(xy 73.66 144.78) (xy 73.66 134.62)
 		)
 		(stroke
@@ -2266,6 +2256,16 @@
 	)
 	(wire
 		(pts
+			(xy 187.96 107.95) (xy 184.15 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2a3a3df-f838-4890-824e-518135b2fb61")
+	)
+	(wire
+		(pts
 			(xy 88.9 29.21) (xy 80.01 29.21)
 		)
 		(stroke
@@ -2293,6 +2293,16 @@
 			(type default)
 		)
 		(uuid "eef9a3e5-e511-490b-80db-bc774579842c")
+	)
+	(wire
+		(pts
+			(xy 218.44 107.95) (xy 218.44 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f23f2fb0-7b08-4014-b330-d63d1d6a25a9")
 	)
 	(wire
 		(pts
@@ -3430,7 +3440,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 222.25 107.95 0)
+		(at 184.15 119.38 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3439,7 +3449,7 @@
 		(fields_autoplaced yes)
 		(uuid "687679a4-6304-4a26-a5c9-2ad2fd347ba4")
 		(property "Reference" "#PWR064"
-			(at 222.25 114.3 0)
+			(at 184.15 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3448,7 +3458,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 222.25 113.03 0)
+			(at 184.15 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3456,7 +3466,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 222.25 107.95 0)
+			(at 184.15 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3465,7 +3475,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 222.25 107.95 0)
+			(at 184.15 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3474,7 +3484,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 222.25 107.95 0)
+			(at 184.15 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4142,16 +4152,16 @@
 	)
 	(symbol
 		(lib_id "SJ-3523-SMT-TR:SJ-3523-SMT-TR")
-		(at 187.96 102.87 0)
+		(at 187.96 107.95 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "a2108c64-393d-4ceb-9303-321e98e15dd4")
 		(property "Reference" "J2"
-			(at 203.2 95.25 0)
+			(at 203.2 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4159,7 +4169,7 @@
 			)
 		)
 		(property "Value" "SJ-3523-SMT-TR"
-			(at 203.2 97.79 0)
+			(at 203.2 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4167,7 +4177,7 @@
 			)
 		)
 		(property "Footprint" "SJ-3523-SMT-TR:SJ3523SMTTR"
-			(at 214.63 197.79 0)
+			(at 214.63 13.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4177,7 +4187,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.sameskydevices.com/product/resource/supplyframepdf/sj-352x-smt.pdf"
-			(at 214.63 297.79 0)
+			(at 214.63 -86.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4187,7 +4197,7 @@
 			)
 		)
 		(property "Description" "3.5 mm, Stereo, Right Angle, Surface Mount (SMT), 3 Conductors, 0 Internal Switches, Audio Jack Connector"
-			(at 187.96 102.87 0)
+			(at 187.96 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4196,7 +4206,7 @@
 			)
 		)
 		(property "Height" "5.2"
-			(at 214.63 497.79 0)
+			(at 214.63 -286.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4206,7 +4216,7 @@
 			)
 		)
 		(property "Mouser Part Number" "490-SJ-3523-SMT-TR"
-			(at 214.63 597.79 0)
+			(at 214.63 -386.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4216,7 +4226,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/CUI-Devices/SJ-3523-SMT-TR?qs=WyjlAZoYn51zOHzJ3r4ZRA%3D%3D"
-			(at 214.63 697.79 0)
+			(at 214.63 -486.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4226,7 +4236,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Same Sky"
-			(at 214.63 797.79 0)
+			(at 214.63 -586.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4236,7 +4246,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "SJ-3523-SMT-TR"
-			(at 214.63 897.79 0)
+			(at 214.63 -686.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
