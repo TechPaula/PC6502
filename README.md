@@ -136,11 +136,13 @@ I expect frequent changes as I add/remove things. Everything should have at leas
 * **Dual Slot Apple II board**: A board that hosts Slot0 and Slot1 from an apple II, it only has the 5V rail though.
     testing is going slowly, I'm not convinced it's correct yet and I doubt it'll be 100% Apple II card compatible.
 
+### PCBs Ordered
+* **RA8875 based display & keyboard interface**: something that can display text and simple graphics and let my type without needing my laptop. I'll probably buy an off the shelf display with this on and memory map it as a peripheral somewhere. I'm hoping to use this in parallel with the USB Serial. I also decided to make my own keyboard, just because :)
+
 
 ## The Future
 I have a bunch of things I want to try adding, some ideas I have are below, some may happen, some may not and they're not in any particular order;
 
-* **RA8875 based display & keyboard interface**: something that can display text and simple graphics and let my type without needing my laptop. I'll probably buy an off the shelf display with this on and memory map it as a peripheral somewhere and it will almost certainly be PS/2 keyboard.
 * **RTC & ASCII Display**: Maybe an RTC and an ascii display (I have a couple of QDSP2118 displays somewhere that I'd like to use)
 * **A Complex Sound Engine**: I'm thinking of my own simple Wavetable based sound engine, possibly with analogue VCF/VCAs. Some kind of tracker software or even MIDI interface to go with it?
 * **SD Storage**: I'm going to want something in the long run as retyping code is going to get tedious quickly. I have found a 6502 SPI interface here, so that may speed things up - https://sbc.rictor.org/65spi2.html
