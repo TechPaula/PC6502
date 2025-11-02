@@ -35,6 +35,9 @@ The Compact Flash Storage board is also working, at least as far as raw byte rea
 The CPU Board has also had a change this allows Clock stretching to be added. Currently only the SLOW1 input is working, but I will add the other later.
 CPLD code for the compact flash board, updated VIA CPLD code and updated CPU CPLD code are now in.
 
+2025-11-02 - Finished the Rev 1.0 keyboard and interface cards, I also made a simple 5V PMOD level shifter. these have been ordered.
+Still testing the AII SLOT PCB, I'm unsure if it is working 100% or not, needs more time and ideally an apple II card to test with.
+
 ## CPU Board
 Actual PCB:
 
