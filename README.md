@@ -123,12 +123,15 @@ I expect frequent changes as I add/remove things. Everything should have at leas
 | 0xA10- | 1     | RW | SP0256 speech synth status/reset || 
 | 0xA11- | 0 - 3 | RW | OPL3 Chip - YM262 | (shared PCB with SP0256) | 
 | 0xA20- | 0 - 7 | RW | Compact Flash |  | 
+| 0xA30- | 0 - F | RW | AII SLOT 0 |  | 
+| 0xA31- | 0 - F | RW | AII SLOT 1 |  | 
 
 
 
 
 ### Things in build & test
-* **Dual Slot Apple II board**: A board that hosts Slot0 and Slot1 from an apple II, it only has the 5V rail though
+* **Dual Slot Apple II board**: A board that hosts Slot0 and Slot1 from an apple II, it only has the 5V rail though.
+    testing is going slowly, I'm not convinced it's correct yet and I doubt it'll be 100% Apple II card compatible.
 
 
 ## The Future
