@@ -1,0 +1,104 @@
+Name PC6502_VIA;
+PartNo	;
+Date		18/10/2025;
+Revision	;
+Designer PaulaMaddox;
+Company	; 
+Assembly	;
+Location	;
+Device f1502ispplcc44;
+
+
+
+/*****************************************************/
+/* Inputs */
+
+pin 9  = A4;
+pin 12 = A5;
+pin 14 = A6;
+pin 16 = A7;
+pin 17 = A8;
+pin 18 = A9;
+pin 19 = A10;
+pin 25 = A11;
+pin 20 = A12;
+pin 21 = A13;
+pin 24 = A14;
+pin 26 = A15;
+
+pin 1  = RnW;
+pin 2  = SYS_CLK;				/* System clock */
+
+pin 8 = !RESET;
+
+
+/*****************************************************/
+/* Outputs */
+
+
+pin 4 = !nSLOW0;
+pin 5 = !nSLOW1;
+
+pin 28 = SYSCLK_DIV2;
+pin 29 = SYSCLK_DIV4;
+
+pin 37 = !nDEVSEL0;
+pin 39 = !nDEVSEL1;
+pin 40 = !nIOSTRB;
+pin 36 = !nIOSEL0;
+pin 34 = !nIOSEL1;
+
+pin 33 = PHI0;
+pin 31 = PHI1;
+
+/*****************************************************/
+/* Pinnodes */
+
+
+
+
+
+
+/*****************************************************/
+/* spares */
+
+
+/*****************************************************/
+/* Address Decode */
+
+
+/* 0xA30n -> */
+nDEVSEL0 = A15 & !A14 & A13 & !A12 & !A11 & !A10 & A9 & A8 & !A7 & !A6 & !A5 & !A4;	
+
+/* 0xA31n -> */
+nDEVSEL1 = A15 & !A14 & A13 & !A12 & !A11 & !A10 & A9 & A8 & !A7 & !A6 & !A5 &  A4;	
+
+/* 0xA4nn -> */
+nIOSEL0 = A15 & !A14 & A13 & !A12 & !A11 & A10 & !A9 & !A8;	
+
+/* 0xA5nn -> */
+nIOSEL1 = A15 & !A14 & A13 & !A12 & !A11 & A10 & !A9 &  A8;
+
+
+/*****************************************************/
+/* Logic Equations */
+
+PHI0 = SYS_CLK;
+PHI1 = !SYS_CLK;
+
+nSLOW1 = nDEVSEL0 # nDEVSEL1 # nIOSEL0 # nIOSEL1;
+nIOSTRB = nDEVSEL0 # nDEVSEL1 # nIOSEL0 # nIOSEL1;
+
+
+SYSCLK_DIV2.ar = RESET;
+SYSCLK_DIV2.t = 'b'1;
+SYSCLK_DIV2.ck = SYS_CLK;
+
+SYSCLK_DIV4.ar = RESET;
+SYSCLK_DIV4.t = SYSCLK_DIV2;
+SYSCLK_DIV4.ck = SYS_CLK;
+
+
+
+/* END OF FILE */
+/*****************************************************/
