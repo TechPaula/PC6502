@@ -5,7 +5,7 @@
  20 B$ = "  "
  30 W$ = "    "
  40 CF = 41472
- 50 BU =49152
+ 50 BU = 49152
  60 INPUT "SECTOR";S
 
  100 REM SET 8 BIT MODE
