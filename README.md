@@ -123,7 +123,8 @@ I expect frequent changes as I add/remove things. Everything should have at leas
 | Address | subAddr | RW | What is it | Notes |
 |---------|---------|----|-------|---------------|
 | 0xA000 | 0 - 1 | RW | Console Control/Data | 60-fake-50, mostly the same as 6850, but no config options|
-| 0xA010 | 0 - 1 | RW | Serial port Control/Data | Future serial port, possibly MIDI? |
+| 0xA010 | 0 - 1 | RW | Interface port for Custom seriak Keyboard |
+| 0xA020 | 0 - 1 | RW | Serial port Control/Data | Future serial port, possibly MIDI? |
 | 0xA08- | 0 - F | RW | 6522 VIA A | One of four locations |
 | 0xA09- | 0 - F | RW | 6522 VIA B | Datasheet - https://eater.net/datasheets/w65c22.pdf |
 | 0xA0A- | 0 - F | RW | 6522 VIA C |  |
