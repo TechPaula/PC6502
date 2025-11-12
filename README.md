@@ -85,7 +85,7 @@ So far the speech engine is working great, and I can read/write from/to the OPL3
 I kind of wanted to make my own keyboard rather than using a PS/2 keyboard, it just felt right to me.
 I also had an old QDSP2118 display around, so I figured I'd pop that on there too.
 
-![PC6502 KeyBed](/Images/KeyBed.jpg?raw=true "KeyBed without keys")
+![PC6502 KeyBed](/Images/KeyBed.jpeg?raw=true "KeyBed without keys")
 
 
 ### Memory Map
