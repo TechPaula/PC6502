@@ -1798,7 +1798,7 @@
 				)
 			)
 		)
-		(property "Value" "HDSP-2503"
+		(property "Value" "HDSP-2103"
 			(at 161.29 64.77 0)
 			(effects
 				(font
