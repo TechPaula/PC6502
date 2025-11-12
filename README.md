@@ -38,6 +38,8 @@ CPLD code for the compact flash board, updated VIA CPLD code and updated CPU CPL
 2025-11-02 - Finished the Rev 1.0 keyboard and interface cards, I also made a simple 5V PMOD level shifter. these have been ordered.
 Still testing the AII SLOT PCB, I'm unsure if it is working 100% or not, needs more time and ideally an apple II card to test with.
 
+2025-11-12 - Working on KeyBed code.
+
 ## CPU Board
 Actual PCB:
 
@@ -78,6 +80,12 @@ So far the speech engine is working great, and I can read/write from/to the OPL3
 
 ![PC6502 VIA board](/Images/PC6502_FM_Speech.jpg?raw=true "FM and speech card")
 
+
+## Keybed
+I kind of wanted to make my own keyboard rather than using a PS/2 keyboard, it just felt right to me.
+I also had an old QDSP2118 display around, so I figured I'd pop that on there too.
+
+![PC6502 KeyBed](/Images/KeyBed.jpg?raw=true "KeyBed without keys")
 
 
 ### Memory Map
