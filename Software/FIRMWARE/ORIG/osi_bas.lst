@@ -349,8 +349,8 @@ Current file: osi_bas.s
 00C020  1  52 C7        		.word ON-1
 00C022  1  6E C6        		.word NULL-1
 00C024  1  25 D4        		.word WAIT-1
-00C026  1  rr rr        		.word LOAD-1
-00C028  1  rr rr        		.word SAVE-1
+00C026  1  74 FF        		.word LOAD-1
+00C028  1  75 FF        		.word SAVE-1
 00C02A  1  D1 CF        		.word DEF-1
 00C02C  1  1C D4        		.word POKE-1
 00C02E  1               TOKEN_PRINT=$80+(*-TOKEN_ADDRESS_TABLE)/2
@@ -910,7 +910,7 @@ Current file: osi_bas.s
 00C383  1               L2453:
 00C383  1  4C 5A C8             jmp     L29B9
 00C386  1               GETLN:
-00C386  1  20 rr rr             jsr     MONRDKEY
+00C386  1  20 39 FF             jsr     MONRDKEY
 00C389  1  EA                   nop
 00C38A  1  EA                   nop
 00C38B  1  EA                   nop
@@ -1402,7 +1402,7 @@ Current file: osi_bas.s
 00C629  1               
 00C629  1               ISCNTC:
 00C629  1               ; MODIFIED CALL BY G.SEARLE FROM THE ORIGINAL OSI CODE
-00C629  1  20 rr rr             jsr     MONISCNTC
+00C629  1  20 49 FF             jsr     MONISCNTC
 00C62C  1               ; runs into "STOP"
 00C62C  1               ; ----------------------------------------------------------------------------
 00C62C  1               ; "STOP" STATEMENT
@@ -1926,7 +1926,7 @@ Current file: osi_bas.s
 00C8ED  1               L2A4E:
 00C8ED  1               ; Commodore forgot to remove this in CBM1
 00C8ED  1  68                   pla
-00C8EE  1  20 rr rr             jsr     MONCOUT
+00C8EE  1  20 2A FF             jsr     MONCOUT
 00C8F1  1  EA                   nop
 00C8F2  1  EA                   nop
 00C8F3  1  EA                   nop
@@ -5904,179 +5904,89 @@ Current file: osi_bas.s
 00DED6  1               ACIAData := ACIA+1
 00DED6  1               
 00DED6  1               .segment "IOHANDLER"
-000000r 1               ;.org $FF00
-000000r 1               Reset:
-000000r 1  A2 FC        	LDX     #STACK_TOP
-000002r 1  9A           	TXS
-000003r 1               
-000003r 1  A9 95        	LDA 	#$95		; Set ACIA baud rate, word size and Rx interrupt (to control RTS)
-000005r 1  8D 00 A0     	STA	ACIAControl
-000008r 1               
-000008r 1               ; Display startup message
-000008r 1  A0 00        	LDY #0
-00000Ar 1               ShowStartMsg:
-00000Ar 1  B9 rr rr     	LDA	StartupMessage,Y
-00000Dr 1  F0 06        	BEQ	WaitForKeypress
-00000Fr 1  20 rr rr     	JSR	MONCOUT
-000012r 1  C8           	INY
-000013r 1  D0 F5        	BNE	ShowStartMsg
-000015r 1               
-000015r 1               ; Wait for a cold/warm start selection
-000015r 1               WaitForKeypress:
-000015r 1  20 rr rr     	JSR	MONRDKEY
-000018r 1  90 FB        	BCC	WaitForKeypress
-00001Ar 1               
-00001Ar 1  29 DF        	AND	#$DF			; Make upper case
-00001Cr 1  C9 57        	CMP	#'W'			; compare with [W]arm start
-00001Er 1  F0 07        	BEQ	WarmStart
-000020r 1               
-000020r 1  C9 43        	CMP	#'C'			; compare with [C]old start
-000022r 1  D0 DC        	BNE	Reset
-000024r 1               
-000024r 1  4C 05 DD     	JMP	COLD_START	; BASIC cold start
-000027r 1               
-000027r 1               WarmStart:
-000027r 1  4C 74 C2     	JMP	RESTART		; BASIC warm start
-00002Ar 1               
-00002Ar 1               MONCOUT:
-00002Ar 1  48           	PHA
-00002Br 1               SerialOutWait:
-00002Br 1  AD 00 A0     	LDA	ACIAStatus
-00002Er 1  29 02        	AND	#2
-000030r 1  C9 02        	CMP	#2
-000032r 1  D0 F7        	BNE	SerialOutWait
-000034r 1  68           	PLA
-000035r 1  8D 01 A0     	STA	ACIAData
-000038r 1  60           	RTS
-000039r 1               
-000039r 1               MONRDKEY:
-000039r 1  AD 00 A0     	LDA	ACIAStatus
-00003Cr 1  29 01        	AND	#1
-00003Er 1  C9 01        	CMP	#1
-000040r 1  D0 05        	BNE	NoDataIn
-000042r 1  AD 01 A0     	LDA	ACIAData
-000045r 1  38           	SEC		; Carry set if key available
-000046r 1  60           	RTS
-000047r 1               NoDataIn:
-000047r 1  18           	CLC		; Carry clear if no key pressed
-000048r 1  60           	RTS
-000049r 1               
-000049r 1               MONISCNTC:
-000049r 1  20 rr rr     	JSR	MONRDKEY
-00004Cr 1  90 06        	BCC	NotCTRLC ; If no key pressed then exit
-00004Er 1  C9 03        	CMP	#3
-000050r 1  D0 02        	BNE	NotCTRLC ; if CTRL-C not pressed then exit
-000052r 1  38           	SEC		; Carry set if control C pressed
-000053r 1  60           	RTS
-000054r 1               NotCTRLC:
-000054r 1  18           	CLC		; Carry clear if control C not pressed
-000055r 1  60           	RTS
-000056r 1               
-000056r 1               StartupMessage:
-000056r 1  0C 50 43 36  	.byte	$0C,"PC6502 Cold [C] or warm [W] start?",$0D,$0A,$00
-00005Ar 1  35 30 32 20  
-00005Er 1  43 6F 6C 64  
-00007Cr 1               
-00007Cr 1               ;-----------------------------------------------------------------------------------
-00007Cr 1               LOAD:
-00007Cr 1  A0 00                LDY #0
-00007Er 1               ShowLoadMsg:
-00007Er 1  B9 rr rr             LDA     LoadMessage,Y
-000081r 1  F0 06                BEQ     WaitLoadKeypress
-000083r 1  20 rr rr             JSR     MONCOUT
-000086r 1  C8                   INY
-000087r 1  D0 F5                BNE     ShowLoadMsg
-000089r 1               
-000089r 1               
-000089r 1               ; Wait for a number
-000089r 1               WaitLoadKeypress:
-000089r 1  20 rr rr             JSR     MONRDKEY
-00008Cr 1  90 FB                BCC     WaitLoadKeypress
-00008Er 1  20 rr rr             JSR     MONCOUT
-000091r 1               
-000091r 1               
-000091r 1               ; need to do some sanity checking
-000091r 1               
-000091r 1               
-000091r 1               ; show loading message
-000091r 1  A0 00                LDY #0
-000093r 1               ShowLoadingMsg:
-000093r 1  B9 rr rr             LDA     LoadingMessage,Y
-000096r 1  F0 06                BEQ     LoadingEnd
-000098r 1  20 rr rr             JSR     MONCOUT
-00009Br 1  C8                   INY
-00009Cr 1  D0 F5                BNE     ShowLoadingMsg
-00009Er 1               
-00009Er 1               
-00009Er 1               
-00009Er 1               
-00009Er 1               
-00009Er 1               LoadingEnd:
-00009Er 1  60           	RTS
-00009Fr 1               
-00009Fr 1               
-00009Fr 1               LoadMessage:
-00009Fr 1  0C 4C 4F 41          .byte   $0C,"LOAD FILE NUMBER? ",$00
-0000A3r 1  44 20 46 49  
-0000A7r 1  4C 45 20 4E  
-0000B3r 1               LoadingMessage:
-0000B3r 1  0C 0D 0A 4C          .byte   $0C,$0D,$0A,"LOADING.",$0D,$0A,$00
-0000B7r 1  4F 41 44 49  
-0000BBr 1  4E 47 2E 0D  
-0000C1r 1               
-0000C1r 1               ;-----------------------------------------------------------------------------------
-0000C1r 1               SAVE:
-0000C1r 1  A0 00                LDY #0
-0000C3r 1               ShowSaveMsg:
-0000C3r 1  B9 rr rr             LDA     SaveMessage,Y
-0000C6r 1  F0 06                BEQ     WaitSaveKeypress
-0000C8r 1  20 rr rr             JSR     MONCOUT
-0000CBr 1  C8                   INY
-0000CCr 1  D0 F5                BNE     ShowSaveMsg
-0000CEr 1               
-0000CEr 1               
-0000CEr 1               ; Wait for a number
-0000CEr 1               WaitSaveKeypress:
-0000CEr 1  20 rr rr             JSR     MONRDKEY
-0000D1r 1  90 FB                BCC     WaitSaveKeypress
-0000D3r 1  20 rr rr             JSR     MONCOUT
-0000D6r 1               
-0000D6r 1               
-0000D6r 1               ; need to do some sanity checking
-0000D6r 1               
-0000D6r 1               ; ask if they're sure
-0000D6r 1               
-0000D6r 1               
-0000D6r 1               ; show saving message
-0000D6r 1  A0 00                LDY #0
-0000D8r 1               ShowSavingMsg:
-0000D8r 1  B9 rr rr             LDA     SavingMessage,Y
-0000DBr 1  F0 06                BEQ     SavingEnd
-0000DDr 1  20 rr rr             JSR     MONCOUT
-0000E0r 1  C8                   INY
-0000E1r 1  D0 F5                BNE     ShowSavingMsg
-0000E3r 1               
-0000E3r 1               SavingEnd:
-0000E3r 1  60                   RTS
-0000E4r 1               
-0000E4r 1               
-0000E4r 1               SaveMessage:
-0000E4r 1  0C 53 41 56          .byte   $0C,"SAVE FILE NUMBER? ",$00
-0000E8r 1  45 20 46 49  
-0000ECr 1  4C 45 20 4E  
-0000F8r 1               SavingMessage:
-0000F8r 1  0C 0D 0A 53          .byte   $0C,$0D,$0A,"SAVING.",$0D,$0A,$00
-0000FCr 1  41 56 49 4E  
-000100r 1  47 2E 0D 0A  
-000105r 1               
-000105r 1               
-000105r 1               ;-----------------------------------------------------------------------------------
-000105r 1               
-000105r 1               
-000105r 1               .segment "VECTS"
+000000r 1               .org $FF00
+00FF00  1               Reset:
+00FF00  1  A2 FC        	LDX     #STACK_TOP
+00FF02  1  9A           	TXS
+00FF03  1               
+00FF03  1  A9 95        	LDA 	#$95		; Set ACIA baud rate, word size and Rx interrupt (to control RTS)
+00FF05  1  8D 00 A0     	STA	ACIAControl
+00FF08  1               
+00FF08  1               ; Display startup message
+00FF08  1  A0 00        	LDY #0
+00FF0A  1               ShowStartMsg:
+00FF0A  1  B9 56 FF     	LDA	StartupMessage,Y
+00FF0D  1  F0 06        	BEQ	WaitForKeypress
+00FF0F  1  20 2A FF     	JSR	MONCOUT
+00FF12  1  C8           	INY
+00FF13  1  D0 F5        	BNE	ShowStartMsg
+00FF15  1               
+00FF15  1               ; Wait for a cold/warm start selection
+00FF15  1               WaitForKeypress:
+00FF15  1  20 39 FF     	JSR	MONRDKEY
+00FF18  1  90 FB        	BCC	WaitForKeypress
+00FF1A  1               
+00FF1A  1  29 DF        	AND	#$DF			; Make upper case
+00FF1C  1  C9 57        	CMP	#'W'			; compare with [W]arm start
+00FF1E  1  F0 07        	BEQ	WarmStart
+00FF20  1               
+00FF20  1  C9 43        	CMP	#'C'			; compare with [C]old start
+00FF22  1  D0 DC        	BNE	Reset
+00FF24  1               
+00FF24  1  4C 05 DD     	JMP	COLD_START	; BASIC cold start
+00FF27  1               
+00FF27  1               WarmStart:
+00FF27  1  4C 74 C2     	JMP	RESTART		; BASIC warm start
+00FF2A  1               
+00FF2A  1               MONCOUT:
+00FF2A  1  48           	PHA
+00FF2B  1               SerialOutWait:
+00FF2B  1  AD 00 A0     	LDA	ACIAStatus
+00FF2E  1  29 02        	AND	#2
+00FF30  1  C9 02        	CMP	#2
+00FF32  1  D0 F7        	BNE	SerialOutWait
+00FF34  1  68           	PLA
+00FF35  1  8D 01 A0     	STA	ACIAData
+00FF38  1  60           	RTS
+00FF39  1               
+00FF39  1               MONRDKEY:
+00FF39  1  AD 00 A0     	LDA	ACIAStatus
+00FF3C  1  29 01        	AND	#1
+00FF3E  1  C9 01        	CMP	#1
+00FF40  1  D0 05        	BNE	NoDataIn
+00FF42  1  AD 01 A0     	LDA	ACIAData
+00FF45  1  38           	SEC		; Carry set if key available
+00FF46  1  60           	RTS
+00FF47  1               NoDataIn:
+00FF47  1  18           	CLC		; Carry clear if no key pressed
+00FF48  1  60           	RTS
+00FF49  1               
+00FF49  1               MONISCNTC:
+00FF49  1  20 39 FF     	JSR	MONRDKEY
+00FF4C  1  90 06        	BCC	NotCTRLC ; If no key pressed then exit
+00FF4E  1  C9 03        	CMP	#3
+00FF50  1  D0 02        	BNE	NotCTRLC ; if CTRL-C not pressed then exit
+00FF52  1  38           	SEC		; Carry set if control C pressed
+00FF53  1  60           	RTS
+00FF54  1               NotCTRLC:
+00FF54  1  18           	CLC		; Carry clear if control C not pressed
+00FF55  1  60           	RTS
+00FF56  1               
+00FF56  1               StartupMessage:
+00FF56  1  0C 43 6F 6C  	.byte	$0C,"Cold [C] or warm [W] start?",$0D,$0A,$00
+00FF5A  1  64 20 5B 43  
+00FF5E  1  5D 20 6F 72  
+00FF75  1               
+00FF75  1               LOAD:
+00FF75  1  60           	RTS
+00FF76  1               
+00FF76  1               SAVE:
+00FF76  1  60           	RTS
+00FF77  1               
+00FF77  1               .segment "VECTS"
 000000r 1               .org $FFFA
-00FFFA  1  rr rr        	.word	Reset		; NMI
-00FFFC  1  rr rr        	.word	Reset		; RESET
-00FFFE  1  rr rr        	.word	Reset		; IRQ
+00FFFA  1  00 FF        	.word	Reset		; NMI
+00FFFC  1  00 FF        	.word	Reset		; RESET
+00FFFE  1  00 FF        	.word	Reset		; IRQ
 010000  1               
 010000  1               

@@ -5775,7 +5775,7 @@ ACIAStatus := ACIA+0
 ACIAData := ACIA+1
 
 .segment "IOHANDLER"
-;.org $FF00
+.org $FF00
 Reset:
 	LDX     #STACK_TOP
 	TXS
@@ -5844,95 +5844,13 @@ NotCTRLC:
 	RTS
 
 StartupMessage:
-	.byte	$0C,"PC6502 Cold [C] or warm [W] start?",$0D,$0A,$00
+	.byte	$0C,"Cold [C] or warm [W] start?",$0D,$0A,$00
 
-;-----------------------------------------------------------------------------------
 LOAD:
-        LDY #0
-ShowLoadMsg:
-        LDA     LoadMessage,Y
-        BEQ     WaitLoadKeypress
-        JSR     MONCOUT
-        INY
-        BNE     ShowLoadMsg
-
-
-; Wait for a number
-WaitLoadKeypress:
-        JSR     MONRDKEY
-        BCC     WaitLoadKeypress
-        JSR     MONCOUT
-
-
-; need to do some sanity checking
-
-
-; show loading message
-        LDY #0
-ShowLoadingMsg:
-        LDA     LoadingMessage,Y
-        BEQ     LoadingEnd
-        JSR     MONCOUT
-        INY
-        BNE     ShowLoadingMsg
-
-
-
-
-
-LoadingEnd:
 	RTS
 	
-
-LoadMessage:
-        .byte   $0C,"LOAD FILE NUMBER? ",$00
-LoadingMessage:
-        .byte   $0C,$0D,$0A,"LOADING.",$0D,$0A,$00
-
-;-----------------------------------------------------------------------------------
 SAVE:
-        LDY #0
-ShowSaveMsg:
-        LDA     SaveMessage,Y
-        BEQ     WaitSaveKeypress
-        JSR     MONCOUT
-        INY
-        BNE     ShowSaveMsg
-
-
-; Wait for a number
-WaitSaveKeypress:
-        JSR     MONRDKEY
-        BCC     WaitSaveKeypress
-        JSR     MONCOUT
-
-
-; need to do some sanity checking
-
-; ask if they're sure
-
-
-; show saving message
-        LDY #0
-ShowSavingMsg:
-        LDA     SavingMessage,Y
-        BEQ     SavingEnd
-        JSR     MONCOUT
-        INY
-        BNE     ShowSavingMsg
-
-SavingEnd:
-        RTS
-        
-
-SaveMessage:
-        .byte   $0C,"SAVE FILE NUMBER? ",$00
-SavingMessage:
-        .byte   $0C,$0D,$0A,"SAVING.",$0D,$0A,$00
-
-
-;-----------------------------------------------------------------------------------
-
+	RTS
 	
 .segment "VECTS"
 .org $FFFA
