@@ -32,6 +32,19 @@
 ; * Applesoft lite by Tom Greene http://cowgod.org/replica1/applesoft/ helped a lot, too.
 ; * Thanks to Joe Zbicak for help with Intellision Keyboard BASIC
 ; * This work is dedicated to the memory of my dear hacking pal Michael "acidity" Kollmann.
+;
+;
+;--------------------------------------------------------------------------------------------; Updated for PC6502
+;       modified by Paula Maddox
+;    
+; 2025-11-15
+;       added .feature force_range to ensure this builds without adding < in places to 
+;               resolve negative numbers (were lines: 584, 4464, 5015)
+;       added placeholders for SAVE, LOAD and DIR. These won't be DOS compatible as
+;               life is just too short for that kinda thing
+;
+
+.feature force_range
 
 .segment "PADDING"
 
@@ -5846,25 +5859,78 @@ NotCTRLC:
 	RTS
 
 StartupMessage:
-	.byte	$0C,"Cold [C] or warm [W] start?",$0D,$0A,$00
+        .byte   $0C,"PC6502 Cold [C] or warm [W] start?",$0D,$0A,$00
 
+;--------------------------------------------------------------------------
 LOAD:
-	RTS
-	
+; Display Load message
+        LDY #0
+ShowLoadMsg:
+        LDA     LoadMessage,Y
+        BEQ     WaitForLoadKeypress
+        JSR     MONCOUT
+        INY
+        BNE     ShowLoadMsg
+
+; Wait for a number
+WaitForLoadKeypress:
+        JSR     MONRDKEY
+        BCC     WaitForLoadKeypress
+                                ; assuming that result of MONRDKEY is saved in A
+        JSR     MONCOUT         ; output keypress to console
+
+        RTS
+
+LoadMessage:
+        .byte   $0C,"LOAD FILE NUMBER? (0-9)",$0D,$0A,$00
+
+;--------------------------------------------------------------------------        
 SAVE:
-	RTS
-	
-DIR:
+; Display Save message
+        LDY #0
+ShowSaveMsg:
+        LDA     SaveMessage,Y
+        BEQ     WaitForSaveKeypress
+        JSR     MONCOUT
+        INY
+        BNE     ShowSaveMsg
+
+; Wait for a number
+WaitForSaveKeypress:
+        JSR     MONRDKEY
+        BCC     WaitForSaveKeypress
+                                ; assuming that result of MONRDKEY is saved in A
+        JSR     MONCOUT         ; output keypress to console
+
         RTS
 
+SaveMessage:
+        .byte   $0C,"SAVE FILE NUMBER? (0-9)",$0D,$0A,$00
+
+;--------------------------------------------------------------------------
+DIR:    
+; Display DIR message
+        LDY #0
+ShowDirMsg:
+        LDA     DirMessage,Y
+        BEQ     DirEnd
+        JSR     MONCOUT
+        INY
+        BNE     ShowDirMsg
+
+DirEnd:
+        RTS
+
+
+DirMessage:
+        .byte   $0C,"Nothing to see here yet",$0D,$0A,$00
+
+;--------------------------------------------------------------------------
 .segment "MONITOR"
-.org $FE00
         RTS
-        .byte "Monitor sits here"
 
+;--------------------------------------------------------------------------
 .segment "VECTS"
-.org $FFFA
-	.word	Reset		; NMI 
-	.word	Reset		; RESET 
-	.word	Reset		; IRQ 
-
+        .word   Reset           ; NMI 
+        .word   Reset           ; RESET 
+        .word   Reset           ; IRQ 

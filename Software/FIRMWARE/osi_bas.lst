@@ -1,4 +1,4 @@
-ca65 V2.13.3 - (C) Copyright 1998-2012 Ullrich von Bassewitz
+ca65 V2.18 - Ubuntu 2.19-1
 Main file   : osi_bas.s
 Current file: osi_bas.s
 
@@ -36,6 +36,19 @@ Current file: osi_bas.s
 000000r 1               ; * Applesoft lite by Tom Greene http://cowgod.org/replica1/applesoft/ helped a lot, too.
 000000r 1               ; * Thanks to Joe Zbicak for help with Intellision Keyboard BASIC
 000000r 1               ; * This work is dedicated to the memory of my dear hacking pal Michael "acidity" Kollmann.
+000000r 1               ;
+000000r 1               ;
+000000r 1               ;--------------------------------------------------------------------------------------------; Updated for PC6502
+000000r 1               ;       modified by Paula Maddox
+000000r 1               ;
+000000r 1               ; 2025-11-15
+000000r 1               ;       added .feature force_range to ensure this builds without adding < in places to
+000000r 1               ;               resolve negative numbers (were lines: 584, 4464, 5015)
+000000r 1               ;       added placeholders for SAVE, LOAD and DIR. These won't be DOS compatible as
+000000r 1               ;               life is just too short for that kinda thing
+000000r 1               ;
+000000r 1               
+000000r 1               .feature force_range
 000000r 1               
 000000r 1               .segment "PADDING"
 000000r 1               
@@ -43,6 +56,95 @@ Current file: osi_bas.s
 000000r 1               
 000000r 1               .setcpu "65C02"
 000000r 1               .macpack longbranch
+000000r 2               .macro  jeq     Target
+000000r 2                       .if     .match(Target, 0)
+000000r 2                       bne     *+5
+000000r 2                       jmp     Target
+000000r 2                       .elseif .def(Target) .and .const((*-2)-(Target)) .and ((*+2)-(Target) <= 127)
+000000r 2                               beq     Target
+000000r 2                       .else
+000000r 2                               bne     *+5
+000000r 2                               jmp     Target
+000000r 2                       .endif
+000000r 2               .endmacro
+000000r 2               .macro  jne     Target
+000000r 2                       .if     .match(Target, 0)
+000000r 2                               beq     *+5
+000000r 2                               jmp     Target
+000000r 2                       .elseif .def(Target) .and .const((*-2)-(Target)) .and ((*+2)-(Target) <= 127)
+000000r 2                               bne     Target
+000000r 2                       .else
+000000r 2                               beq     *+5
+000000r 2                               jmp     Target
+000000r 2                       .endif
+000000r 2               .endmacro
+000000r 2               .macro  jmi     Target
+000000r 2                       .if     .match(Target, 0)
+000000r 2                               bpl     *+5
+000000r 2                               jmp     Target
+000000r 2                       .elseif .def(Target) .and .const((*-2)-(Target)) .and ((*+2)-(Target) <= 127)
+000000r 2                               bmi     Target
+000000r 2                       .else
+000000r 2                               bpl     *+5
+000000r 2                               jmp     Target
+000000r 2                       .endif
+000000r 2               .endmacro
+000000r 2               .macro  jpl     Target
+000000r 2                       .if     .match(Target, 0)
+000000r 2                               bmi     *+5
+000000r 2                               jmp     Target
+000000r 2                       .elseif .def(Target) .and .const((*-2)-(Target)) .and ((*+2)-(Target) <= 127)
+000000r 2                               bpl     Target
+000000r 2                       .else
+000000r 2                               bmi     *+5
+000000r 2                               jmp     Target
+000000r 2                       .endif
+000000r 2               .endmacro
+000000r 2               .macro  jcs     Target
+000000r 2                       .if     .match(Target, 0)
+000000r 2                               bcc     *+5
+000000r 2                               jmp     Target
+000000r 2                       .elseif .def(Target) .and .const((*-2)-(Target)) .and ((*+2)-(Target) <= 127)
+000000r 2                               bcs     Target
+000000r 2                       .else
+000000r 2                               bcc     *+5
+000000r 2                               jmp     Target
+000000r 2                       .endif
+000000r 2               .endmacro
+000000r 2               .macro  jcc     Target
+000000r 2                       .if     .match(Target, 0)
+000000r 2                               bcs     *+5
+000000r 2                               jmp     Target
+000000r 2                       .elseif .def(Target) .and .const((*-2)-(Target)) .and ((*+2)-(Target) <= 127)
+000000r 2                               bcc     Target
+000000r 2                       .else
+000000r 2                               bcs     *+5
+000000r 2                               jmp     Target
+000000r 2                       .endif
+000000r 2               .endmacro
+000000r 2               .macro  jvs     Target
+000000r 2                       .if     .match(Target, 0)
+000000r 2                               bvc     *+5
+000000r 2                               jmp     Target
+000000r 2                       .elseif .def(Target) .and .const((*-2)-(Target)) .and ((*+2)-(Target) <= 127)
+000000r 2                               bvs     Target
+000000r 2                       .else
+000000r 2                               bvc     *+5
+000000r 2                               jmp     Target
+000000r 2                       .endif
+000000r 2               .endmacro
+000000r 2               .macro  jvc     Target
+000000r 2                       .if     .match(Target, 0)
+000000r 2                               bvs     *+5
+000000r 2                               jmp     Target
+000000r 2                       .elseif .def(Target) .and .const((*-2)-(Target)) .and ((*+2)-(Target) <= 127)
+000000r 2                               bvc     Target
+000000r 2                       .else
+000000r 2                               bvs     *+5
+000000r 2                               jmp     Target
+000000r 2                       .endif
+000000r 2               .endmacro
+000000r 2               
 000000r 1               
 000000r 1               ; zero page
 000000r 1               ZP_START1 = $00
@@ -261,9 +363,9 @@ Current file: osi_bas.s
 00C020  1  54 C7        		.word ON-1
 00C022  1  70 C6        		.word NULL-1
 00C024  1  27 D4        		.word WAIT-1
-00C026  1  74 F0        		.word LOAD-1
-00C028  1  75 F0        		.word SAVE-1
-00C02A  1  76 F0                        .word DIR-1
+00C026  1  7B F0        		.word LOAD-1
+00C028  1  AC F0        		.word SAVE-1
+00C02A  1  DD F0                        .word DIR-1
 00C02C  1  D3 CF        		.word DEF-1
 00C02E  1  1E D4        		.word POKE-1
 00C030  1               TOKEN_PRINT=$80+(*-TOKEN_ADDRESS_TABLE)/2
@@ -5886,30 +5988,87 @@ Current file: osi_bas.s
 00F055  1  60           	RTS
 00F056  1               
 00F056  1               StartupMessage:
-00F056  1  0C 43 6F 6C  	.byte	$0C,"Cold [C] or warm [W] start?",$0D,$0A,$00
-00F05A  1  64 20 5B 43  
-00F05E  1  5D 20 6F 72  
-00F075  1               
-00F075  1               LOAD:
-00F075  1  60           	RTS
-00F076  1               
-00F076  1               SAVE:
-00F076  1  60           	RTS
-00F077  1               
-00F077  1               DIR:
-00F077  1  60                   RTS
-00F078  1               
-00F078  1               .segment "MONITOR"
-000000r 1               .org $FE00
-00FE00  1  60                   RTS
-00FE01  1  4D 6F 6E 69          .byte "Monitor sits here"
-00FE05  1  74 6F 72 20  
-00FE09  1  73 69 74 73  
-00FE12  1               
-00FE12  1               .segment "VECTS"
-000000r 1               .org $FFFA
-00FFFA  1  00 F0        	.word	Reset		; NMI
-00FFFC  1  00 F0        	.word	Reset		; RESET
-00FFFE  1  00 F0        	.word	Reset		; IRQ
-010000  1               
-010000  1               
+00F056  1  0C 50 43 36          .byte   $0C,"PC6502 Cold [C] or warm [W] start?",$0D,$0A,$00
+00F05A  1  35 30 32 20  
+00F05E  1  43 6F 6C 64  
+00F07C  1               
+00F07C  1               ;--------------------------------------------------------------------------
+00F07C  1               LOAD:
+00F07C  1               ; Display Load message
+00F07C  1  A0 00                LDY #0
+00F07E  1               ShowLoadMsg:
+00F07E  1  B9 92 F0             LDA     LoadMessage,Y
+00F081  1  F0 06                BEQ     WaitForLoadKeypress
+00F083  1  20 2A F0             JSR     MONCOUT
+00F086  1  C8                   INY
+00F087  1  D0 F5                BNE     ShowLoadMsg
+00F089  1               
+00F089  1               ; Wait for a number
+00F089  1               WaitForLoadKeypress:
+00F089  1  20 39 F0             JSR     MONRDKEY
+00F08C  1  90 FB                BCC     WaitForLoadKeypress
+00F08E  1                                               ; assuming that result of MONRDKEY is saved in A
+00F08E  1  20 2A F0             JSR     MONCOUT         ; output keypress to console
+00F091  1               
+00F091  1  60                   RTS
+00F092  1               
+00F092  1               LoadMessage:
+00F092  1  0C 4C 4F 41          .byte   $0C,"LOAD FILE NUMBER? (0-9)",$0D,$0A,$00
+00F096  1  44 20 46 49  
+00F09A  1  4C 45 20 4E  
+00F0AD  1               
+00F0AD  1               ;--------------------------------------------------------------------------
+00F0AD  1               SAVE:
+00F0AD  1               ; Display Save message
+00F0AD  1  A0 00                LDY #0
+00F0AF  1               ShowSaveMsg:
+00F0AF  1  B9 C3 F0             LDA     SaveMessage,Y
+00F0B2  1  F0 06                BEQ     WaitForSaveKeypress
+00F0B4  1  20 2A F0             JSR     MONCOUT
+00F0B7  1  C8                   INY
+00F0B8  1  D0 F5                BNE     ShowSaveMsg
+00F0BA  1               
+00F0BA  1               ; Wait for a number
+00F0BA  1               WaitForSaveKeypress:
+00F0BA  1  20 39 F0             JSR     MONRDKEY
+00F0BD  1  90 FB                BCC     WaitForSaveKeypress
+00F0BF  1                                               ; assuming that result of MONRDKEY is saved in A
+00F0BF  1  20 2A F0             JSR     MONCOUT         ; output keypress to console
+00F0C2  1               
+00F0C2  1  60                   RTS
+00F0C3  1               
+00F0C3  1               SaveMessage:
+00F0C3  1  0C 53 41 56          .byte   $0C,"SAVE FILE NUMBER? (0-9)",$0D,$0A,$00
+00F0C7  1  45 20 46 49  
+00F0CB  1  4C 45 20 4E  
+00F0DE  1               
+00F0DE  1               ;--------------------------------------------------------------------------
+00F0DE  1               DIR:
+00F0DE  1               ; Display DIR message
+00F0DE  1  A0 00                LDY #0
+00F0E0  1               ShowDirMsg:
+00F0E0  1  B9 EC F0             LDA     DirMessage,Y
+00F0E3  1  F0 06                BEQ     DirEnd
+00F0E5  1  20 2A F0             JSR     MONCOUT
+00F0E8  1  C8                   INY
+00F0E9  1  D0 F5                BNE     ShowDirMsg
+00F0EB  1               
+00F0EB  1               DirEnd:
+00F0EB  1  60                   RTS
+00F0EC  1               
+00F0EC  1               
+00F0EC  1               DirMessage:
+00F0EC  1  0C 4E 6F 74          .byte   $0C,"Nothing to see here yet",$0D,$0A,$00
+00F0F0  1  68 69 6E 67  
+00F0F4  1  20 74 6F 20  
+00F107  1               
+00F107  1               ;--------------------------------------------------------------------------
+00F107  1               .segment "MONITOR"
+000000r 1  60                   RTS
+000001r 1               
+000001r 1               ;--------------------------------------------------------------------------
+000001r 1               .segment "VECTS"
+000000r 1  00 F0                .word   Reset           ; NMI
+000002r 1  00 F0                .word   Reset           ; RESET
+000004r 1  00 F0                .word   Reset           ; IRQ
+000004r 1               

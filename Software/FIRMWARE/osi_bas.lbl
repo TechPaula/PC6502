@@ -1,3 +1,12 @@
+al 00F0EB .DirEnd
+al 00F0EC .DirMessage
+al 00F0E0 .ShowDirMsg
+al 00F0BA .WaitForSaveKeypress
+al 00F0C3 .SaveMessage
+al 00F0AF .ShowSaveMsg
+al 00F089 .WaitForLoadKeypress
+al 00F092 .LoadMessage
+al 00F07E .ShowLoadMsg
 al 00F054 .NotCTRLC
 al 00F047 .NoDataIn
 al 00F02B .SerialOutWait
@@ -676,9 +685,9 @@ al 00C657 .CONT
 al 00C825 .PRINT
 al 00D41F .POKE
 al 00CFD4 .DEF
-al 00F077 .DIR
-al 00F076 .SAVE
-al 00F075 .LOAD
+al 00F0DE .DIR
+al 00F0AD .SAVE
+al 00F07C .LOAD
 al 00D428 .WAIT
 al 00C671 .NULL
 al 00C755 .ON

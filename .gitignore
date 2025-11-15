@@ -2,3 +2,5 @@
 Reference/
 
 *.zip
+/Software/ATMEL/test2.X/dist/
+/Software/ATMEL/test2.X/build/
