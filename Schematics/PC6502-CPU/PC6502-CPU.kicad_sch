@@ -8687,16 +8687,6 @@
 		)
 		(uuid "4ffeec86-4e5d-49dd-bba7-1ac273233084")
 	)
-	(text "A15 allows me to do\nBanked memory if want"
-		(exclude_from_sim no)
-		(at 225.044 162.56 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "5e2e72ca-4ae5-48e7-ad0f-4fd7b50f80f1")
-	)
 	(text "CPU_CLK is the stretched\nversion of CLK. \nUse nSLOW0 and nSLOW1 to\nslow the clock down"
 		(exclude_from_sim no)
 		(at 381 195.326 0)
@@ -9046,12 +9036,6 @@
 		(uuid "8a51ffc4-9f8f-43f7-bee9-cbbe6bc8fd02")
 	)
 	(junction
-		(at 152.4 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8d98e0c4-8647-4872-b0f5-54beb616f060")
-	)
-	(junction
 		(at 240.03 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9232,12 +9216,20 @@
 		(uuid "5cca2abd-c139-4765-b0a2-47278b8a3c99")
 	)
 	(no_connect
+		(at 140.97 134.62)
+		(uuid "5f740804-58b2-4d83-a058-d668c0b92f57")
+	)
+	(no_connect
 		(at 64.77 152.4)
 		(uuid "6546553f-a975-411f-845e-8bbcbabea273")
 	)
 	(no_connect
 		(at 264.16 83.82)
 		(uuid "6a6550ce-205c-4f3a-99e6-82bb1eb444ed")
+	)
+	(no_connect
+		(at 171.45 162.56)
+		(uuid "88dd3c1d-89bc-4474-b0c2-0b0893df129e")
 	)
 	(no_connect
 		(at 64.77 149.86)
@@ -10287,6 +10279,15 @@
 		(uuid "f3547d85-f4d9-4450-bbe7-50fb6ce9c093")
 	)
 	(bus_entry
+		(at 165.1 80.01)
+		(size -2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8e22b35-4c27-4e60-85d1-89c84897b78d")
+	)
+	(bus_entry
 		(at 124.46 110.49)
 		(size -2.54 -2.54)
 		(stroke
@@ -10547,16 +10548,6 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 101.6) (xy 152.4 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0c35e08f-c860-4de1-9bea-6d4a4dc60272")
-	)
-	(wire
-		(pts
 			(xy 264.16 38.1) (xy 256.54 38.1)
 		)
 		(stroke
@@ -10614,16 +10605,6 @@
 			(type default)
 		)
 		(uuid "0f90e988-6905-4e02-8b1d-f95c9d7d9df4")
-	)
-	(wire
-		(pts
-			(xy 152.4 80.01) (xy 172.72 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1011e5a4-6980-4455-8fb3-bc6be7996032")
 	)
 	(wire
 		(pts
@@ -11124,16 +11105,6 @@
 			(type default)
 		)
 		(uuid "283f87d8-542a-4c8b-bdc3-870b7ab6530a")
-	)
-	(wire
-		(pts
-			(xy 152.4 80.01) (xy 152.4 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "296d3d66-8bd4-4a84-9cc9-3edb9fe40c78")
 	)
 	(wire
 		(pts
@@ -13587,6 +13558,16 @@
 	)
 	(bus
 		(pts
+			(xy 162.56 74.93) (xy 162.56 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d03f5c1-916b-4e56-bab2-8b1cc5868aa1")
+	)
+	(bus
+		(pts
 			(xy 327.66 129.54) (xy 327.66 132.08)
 		)
 		(stroke
@@ -15007,16 +14988,6 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 162.56) (xy 201.93 162.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "db7ef3f3-8c60-43b1-afff-4847bacc53e4")
-	)
-	(wire
-		(pts
 			(xy 116.84 243.84) (xy 116.84 246.38)
 		)
 		(stroke
@@ -15124,16 +15095,6 @@
 			(type default)
 		)
 		(uuid "e3050242-21a6-4621-9bf8-b4ca9a6b572b")
-	)
-	(wire
-		(pts
-			(xy 149.86 80.01) (xy 152.4 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e3beccc2-cf74-42e4-9114-d6d0266a3d6d")
 	)
 	(bus
 		(pts
@@ -15344,6 +15305,16 @@
 			(type default)
 		)
 		(uuid "ed00cad9-0e5d-4fea-8f87-f7d032f1b3c3")
+	)
+	(wire
+		(pts
+			(xy 172.72 80.01) (xy 165.1 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee63db9d-f2c9-4b4f-b916-9cf5f32cb702")
 	)
 	(wire
 		(pts
@@ -16115,6 +16086,16 @@
 		)
 		(uuid "729343ee-17c7-4a56-9e8f-8fd8c2f80ca0")
 	)
+	(label "A15"
+		(at 170.18 80.01 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "77349766-5669-48d4-a234-06ef5d2456cd")
+	)
 	(label "A7"
 		(at 326.39 154.94 180)
 		(effects
@@ -16244,6 +16225,16 @@
 			(justify right bottom)
 		)
 		(uuid "94ff90c4-52aa-4f5d-aeb8-2e5e68a07806")
+	)
+	(label "{ADDR}"
+		(at 135.89 25.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "95573c05-353f-4515-87c6-2a3544afa2a6")
 	)
 	(label "A3"
 		(at 114.3 50.8 0)
@@ -16454,6 +16445,16 @@
 			(justify right bottom)
 		)
 		(uuid "b5216e3d-4e8c-4883-a4a7-3584ed3801bc")
+	)
+	(label "{DATA}"
+		(at 241.3 19.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b7339d11-2700-4c81-b161-0e628924069f")
 	)
 	(label "D4"
 		(at 200.66 52.07 0)
@@ -17149,28 +17150,6 @@
 			)
 		)
 	)
-	(global_label "RAM_A15"
-		(shape output)
-		(at 201.93 162.56 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "44f61e00-a525-42ef-88f0-3003d43ca4e7")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 213.2004 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "ROM_nR"
 		(shape output)
 		(at 182.88 144.78 0)
@@ -17712,28 +17691,6 @@
 		(uuid "a6463443-003c-4e38-b10f-452e8dd9c608")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 362.1096 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "RAM_A15"
-		(shape input)
-		(at 149.86 80.01 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ab6b4bb7-1d45-4918-a69a-b7e7ed0b7518")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 138.5896 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19900,83 +19857,6 @@
 			(project "PC6502-CPU"
 				(path "/f3365b77-bdc1-4fa0-8030-841dab6ab2be"
 					(reference "#PWR033")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 152.4 93.98 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2951076e-b081-4140-a202-f39d8f700b4e")
-		(property "Reference" "R13"
-			(at 153.67 92.964 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10K"
-			(at 153.67 95.504 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 150.622 93.98 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 152.4 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 152.4 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C25744"
-			(at 152.4 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "813eaf4d-627a-4c97-9f6c-085f7c58b240")
-		)
-		(pin "2"
-			(uuid "b7a23fa3-c2b8-4ba7-994d-33e551527eac")
-		)
-		(instances
-			(project "PC6502-CPU"
-				(path "/f3365b77-bdc1-4fa0-8030-841dab6ab2be"
-					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -27547,70 +27427,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 152.4 101.6 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "eb222471-c519-4094-acc3-95e8187cccfa")
-		(property "Reference" "#PWR058"
-			(at 152.4 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 152.4 106.1625 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 152.4 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 152.4 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 152.4 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "416cb00b-b7e8-473c-a6ed-9c707b580a74")
-		)
-		(instances
-			(project "PC6502-CPU"
-				(path "/f3365b77-bdc1-4fa0-8030-841dab6ab2be"
-					(reference "#PWR058")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 262.89 222.25 90)
 		(unit 1)
@@ -27987,8 +27803,8 @@
 				)
 			)
 		)
-		(property "Value" "CXO_DIP8"
-			(at 123.19 229.87 0)
+		(property "Value" "28.4322MHz"
+			(at 123.952 229.362 0)
 			(effects
 				(font
 					(size 1.27 1.27)
