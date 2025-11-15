@@ -40,6 +40,11 @@ Still testing the AII SLOT PCB, I'm unsure if it is working 100% or not, needs m
 
 2025-11-12 - Working on KeyBed code.
 
+2025-11-15 - Updated the KeyTFT board to Rev 1.1, removed the ATMEGA644, replaced it with a W65C51, as it'll only really be receiving from the keyboard I'm hoping the bug won't be a problem. The display is also now parallel rather than SPI.
+Addtionally I've tweaked the CPU board to revision 1.4, this connects A15 direct to the RAM, so in theory getting more than 32K should be quicker and just require a change in the CPLD.
+Keybed code working, aside from caps lock. Waiting for the full keyset and stabalisers to arrive before doing more.
+
+
 ## CPU Board
 Actual PCB:
 
