@@ -398,10 +398,10 @@ END GROUP
  .debug_abbrev  0x0000000000000000      0x66e /opt/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega644p.o
  .debug_abbrev  0x000000000000066e      0x251 build/default/production/main.o
 
-.debug_line     0x0000000000000000      0x6a1
+.debug_line     0x0000000000000000      0x6ad
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x152 /opt/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega644p.o
- .debug_line    0x0000000000000152      0x54f build/default/production/main.o
+ .debug_line    0x0000000000000152      0x55b build/default/production/main.o
 
 .debug_frame    0x0000000000000000       0xc8
  *(.debug_frame)
@@ -412,9 +412,9 @@ END GROUP
  .debug_str     0x0000000000000000      0x252 /opt/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega644p.o
  .debug_str     0x0000000000000252        0x0 build/default/production/main.o
 
-.debug_loc      0x0000000000000000      0x329
+.debug_loc      0x0000000000000000      0x336
  *(.debug_loc)
- .debug_loc     0x0000000000000000      0x329 build/default/production/main.o
+ .debug_loc     0x0000000000000000      0x336 build/default/production/main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -492,149 +492,149 @@ LOAD data_init
                 0x00000000000000f4                main
 
 .text.__vector_13
-                0x0000000000000344       0x84
+                0x0000000000000344       0x82
  .text.__vector_13
-                0x0000000000000344       0x84 build/default/production/main.o
+                0x0000000000000344       0x82 build/default/production/main.o
                 0x0000000000000344                __vector_13
 
 .text.UpdateDisplay
-                0x00000000000003c8       0x58
+                0x00000000000003c6       0x58
  .text.UpdateDisplay
-                0x00000000000003c8       0x58 build/default/production/main.o
-                0x00000000000003c8                UpdateDisplay
+                0x00000000000003c6       0x58 build/default/production/main.o
+                0x00000000000003c6                UpdateDisplay
 
 .text.TIMER1_Init
-                0x0000000000000420       0x28
+                0x000000000000041e       0x28
  .text.TIMER1_Init
-                0x0000000000000420       0x28 build/default/production/main.o
-                0x0000000000000420                TIMER1_Init
+                0x000000000000041e       0x28 build/default/production/main.o
+                0x000000000000041e                TIMER1_Init
 
 .text.GetBitNum
-                0x0000000000000448       0x22
+                0x0000000000000446       0x22
  .text.GetBitNum
-                0x0000000000000448       0x22 build/default/production/main.o
-                0x0000000000000448                GetBitNum
+                0x0000000000000446       0x22 build/default/production/main.o
+                0x0000000000000446                GetBitNum
 
 .text.USART0_Init
-                0x000000000000046a       0x22
+                0x0000000000000468       0x22
  .text.USART0_Init
-                0x000000000000046a       0x22 build/default/production/main.o
-                0x000000000000046a                USART0_Init
+                0x0000000000000468       0x22 build/default/production/main.o
+                0x0000000000000468                USART0_Init
 
 .text.USART0_PutString
-                0x000000000000048c       0x1e
+                0x000000000000048a       0x1e
  .text.USART0_PutString
-                0x000000000000048c       0x1e build/default/production/main.o
-                0x000000000000048c                USART0_PutString
+                0x000000000000048a       0x1e build/default/production/main.o
+                0x000000000000048a                USART0_PutString
 
-.text.exit      0x00000000000004aa       0x16
- .text.exit     0x00000000000004aa       0x16 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/libc.a(exit.o)
-                0x00000000000004aa                exit
+.text.exit      0x00000000000004a8       0x16
+ .text.exit     0x00000000000004a8       0x16 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/libc.a(exit.o)
+                0x00000000000004a8                exit
 
 .text.USART0_GetChar
-                0x00000000000004c0       0x12
+                0x00000000000004be       0x12
  .text.USART0_GetChar
-                0x00000000000004c0       0x12 build/default/production/main.o
-                0x00000000000004c0                USART0_GetChar
+                0x00000000000004be       0x12 build/default/production/main.o
+                0x00000000000004be                USART0_GetChar
 
 .text.USART0_Put
-                0x00000000000004d2       0x10
+                0x00000000000004d0       0x10
  .text.USART0_Put
-                0x00000000000004d2       0x10 build/default/production/main.o
-                0x00000000000004d2                USART0_Put
+                0x00000000000004d0       0x10 build/default/production/main.o
+                0x00000000000004d0                USART0_Put
 
 .text.USART0_CheckChar
-                0x00000000000004e2        0xc
+                0x00000000000004e0        0xc
  .text.USART0_CheckChar
-                0x00000000000004e2        0xc build/default/production/main.o
-                0x00000000000004e2                USART0_CheckChar
+                0x00000000000004e0        0xc build/default/production/main.o
+                0x00000000000004e0                USART0_CheckChar
 
-.text           0x00000000000004ee        0x4
- .text          0x00000000000004ee        0x4 /opt/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega644p.o
-                0x00000000000004ee                __vector_22
-                0x00000000000004ee                __vector_28
-                0x00000000000004ee                __vector_1
-                0x00000000000004ee                __vector_24
-                0x00000000000004ee                __vector_12
-                0x00000000000004ee                __bad_interrupt
-                0x00000000000004ee                __vector_6
-                0x00000000000004ee                __vector_3
-                0x00000000000004ee                __vector_23
-                0x00000000000004ee                __vector_30
-                0x00000000000004ee                __vector_25
-                0x00000000000004ee                __vector_11
-                0x00000000000004ee                __vector_17
-                0x00000000000004ee                __vector_19
-                0x00000000000004ee                __vector_7
-                0x00000000000004ee                __vector_27
-                0x00000000000004ee                __vector_5
-                0x00000000000004ee                __vector_4
-                0x00000000000004ee                __vector_9
-                0x00000000000004ee                __vector_2
-                0x00000000000004ee                __vector_21
-                0x00000000000004ee                __vector_15
-                0x00000000000004ee                __vector_29
-                0x00000000000004ee                __vector_8
-                0x00000000000004ee                __vector_26
-                0x00000000000004ee                __vector_14
-                0x00000000000004ee                __vector_10
-                0x00000000000004ee                __vector_16
-                0x00000000000004ee                __vector_18
-                0x00000000000004ee                __vector_20
+.text           0x00000000000004ec        0x4
+ .text          0x00000000000004ec        0x4 /opt/microchip/mplabx/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega644p.o
+                0x00000000000004ec                __vector_22
+                0x00000000000004ec                __vector_28
+                0x00000000000004ec                __vector_1
+                0x00000000000004ec                __vector_24
+                0x00000000000004ec                __vector_12
+                0x00000000000004ec                __bad_interrupt
+                0x00000000000004ec                __vector_6
+                0x00000000000004ec                __vector_3
+                0x00000000000004ec                __vector_23
+                0x00000000000004ec                __vector_30
+                0x00000000000004ec                __vector_25
+                0x00000000000004ec                __vector_11
+                0x00000000000004ec                __vector_17
+                0x00000000000004ec                __vector_19
+                0x00000000000004ec                __vector_7
+                0x00000000000004ec                __vector_27
+                0x00000000000004ec                __vector_5
+                0x00000000000004ec                __vector_4
+                0x00000000000004ec                __vector_9
+                0x00000000000004ec                __vector_2
+                0x00000000000004ec                __vector_21
+                0x00000000000004ec                __vector_15
+                0x00000000000004ec                __vector_29
+                0x00000000000004ec                __vector_8
+                0x00000000000004ec                __vector_26
+                0x00000000000004ec                __vector_14
+                0x00000000000004ec                __vector_10
+                0x00000000000004ec                __vector_16
+                0x00000000000004ec                __vector_18
+                0x00000000000004ec                __vector_20
 
-.text._Exit     0x00000000000004f2        0x4
- .text._Exit    0x00000000000004f2        0x4 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/libc.a(_Exit.o)
-                0x00000000000004f2                _Exit
+.text._Exit     0x00000000000004f0        0x4
+ .text._Exit    0x00000000000004f0        0x4 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/libc.a(_Exit.o)
+                0x00000000000004f0                _Exit
 
 .text.__dummy_fini
-                0x00000000000004f6        0x2
+                0x00000000000004f4        0x2
  .text.__dummy_fini
-                0x00000000000004f6        0x2 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/libc.a(exit.o)
-                0x00000000000004f6                _fini
+                0x00000000000004f4        0x2 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/libc.a(exit.o)
+                0x00000000000004f4                _fini
 
 .text.__dummy_funcs_on_exit
-                0x00000000000004f8        0x2
+                0x00000000000004f6        0x2
  .text.__dummy_funcs_on_exit
-                0x00000000000004f8        0x2 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/libc.a(exit.o)
-                0x00000000000004f8                __funcs_on_exit
+                0x00000000000004f6        0x2 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/libc.a(exit.o)
+                0x00000000000004f6                __funcs_on_exit
 
 .text.__dummy_simulator_exit
-                0x00000000000004fa        0x2
+                0x00000000000004f8        0x2
  .text.__dummy_simulator_exit
-                0x00000000000004fa        0x2 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/libc.a(exit.o)
-                0x00000000000004fa                __simulator_exit
+                0x00000000000004f8        0x2 /opt/microchip/xc8/v3.10/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/libc.a(exit.o)
+                0x00000000000004f8                __simulator_exit
 
 .data.shiftchartable
-                0x0000000000800100       0x40 load address 0x00000000000004fc
+                0x0000000000800100       0x40 load address 0x00000000000004fa
  .data.shiftchartable
                 0x0000000000800100       0x40 build/default/production/main.o
                 0x0000000000800100                shiftchartable
 
 .data.chartable
-                0x0000000000800140       0x40 load address 0x000000000000053c
+                0x0000000000800140       0x40 load address 0x000000000000053a
  .data.chartable
                 0x0000000000800140       0x40 build/default/production/main.o
                 0x0000000000800140                chartable
 
-.rodata         0x0000000000800180       0x19 load address 0x000000000000057c
+.rodata         0x0000000000800180       0x19 load address 0x000000000000057a
  .rodata        0x0000000000800180       0x19 build/default/production/main.o
 
-.data.dispchar  0x0000000000800199        0x8 load address 0x0000000000000595
+.data.dispchar  0x0000000000800199        0x8 load address 0x0000000000000593
  .data.dispchar
                 0x0000000000800199        0x8 build/default/production/main.o
                 0x0000000000800199                dispchar
 
-.data.CapsLock  0x00000000008001a3        0x1 load address 0x000000000000059d
+.data.CapsLock  0x00000000008001a3        0x1 load address 0x000000000000059b
  .data.CapsLock
                 0x00000000008001a3        0x1 build/default/production/main.o
                 0x00000000008001a3                CapsLock
 
 .data.olddataout
-                0x00000000008001a6        0x1 load address 0x000000000000059e
+                0x00000000008001a6        0x1 load address 0x000000000000059c
  .data.olddataout
                 0x00000000008001a6        0x1 build/default/production/main.o
                 0x00000000008001a6                olddataout
 
-.data.Sent      0x00000000008001a7        0x1 load address 0x000000000000059f
+.data.Sent      0x00000000008001a7        0x1 load address 0x000000000000059d
  .data.Sent     0x00000000008001a7        0x1 build/default/production/main.o
                 0x00000000008001a7                Sent

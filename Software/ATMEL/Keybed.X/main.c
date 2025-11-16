@@ -148,10 +148,11 @@ int main(int argc, char** argv)
         if(KeyPress< 0xFF)
         {
             cli();
-
+                
+            char dataout = 255;
             uint8_t temp = GetBitNum(KeyPress);             // sort which row we've read
-      
-            char dataout = chartable[(8*temp)+KeyCol];      // fetch character from table
+            
+            dataout = chartable[(8*temp)+KeyCol];      // fetch character from table
             
             // special keys these are refreshed every complete matrix read
             switch(dataout)
@@ -175,6 +176,7 @@ int main(int argc, char** argv)
                     else
                     {
                         CapsLock = 1;
+                        break;
                     }
                     break;
                 }
@@ -190,7 +192,6 @@ int main(int argc, char** argv)
                 
                 ShiftStatus = 0;
                 CtrlStatus = 0;
-//                olddataout = dataout;                         // breaks if you put this in
 //                debouncecount = 0;                            // repeat breaks if you put this in
             }
             if((dataout < 128) && (dataout != olddataout))  // Send Normal ASCII Characters
@@ -217,6 +218,7 @@ int main(int argc, char** argv)
         }
         // End of send data code
             
+        
         // Data in?
         if(USART0_CheckChar())
         {   
@@ -403,23 +405,23 @@ ISR(TIMER1_COMPA_vect, ISR_BLOCK)
     if((PINB < 0xFF) && (Sent))
     {
         KeyPress = PINB;
-        KeyCol = ColCount-1;
+        KeyCol = ColCount;
     }
     
-    PORTD = ColCount << 5;
-
+    ColCount++;
+    
     if(ColCount > 7)
     {
         ColCount = 0;
         debouncecount++;
-        if(debouncecount > 30)
+        if(debouncecount > 30)          // sets repeat time.
         {
             olddataout = 255;  
             debouncecount = 0;
         }
-        
     }
-    ColCount++;
 
+    PORTD = ColCount << 5;
+    
     // Timer1 CTC flag auto-cleared by hardware
 }
