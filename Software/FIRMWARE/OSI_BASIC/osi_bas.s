@@ -38,6 +38,7 @@
 ;.p816
 .setcpu "6502"
 .macpack longbranch
+.feature labels_without_colons
 
 ; zero page
 ZP_START1 = $00
