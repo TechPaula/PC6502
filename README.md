@@ -44,6 +44,8 @@ Still testing the AII SLOT PCB, I'm unsure if it is working 100% or not, needs m
 Addtionally I've tweaked the CPU board to revision 1.4, this connects A15 direct to the RAM, so in theory getting more than 32K should be quicker and just require a change in the CPLD.
 Keybed code working, aside from caps lock. Waiting for the full keyset and stabalisers to arrive before doing more.
 
+2025-11-17 - EhBASIC and WozMon enhanced are now up and running on the PC6502 thanks to Shonky. EhBASIC is a little faster, but for me this brings a much needed ability to work with values in hex ($) or binary (%) which makes life a lot easier when trying to drive peripherals and IO.
+
 
 ## CPU Board
 Actual PCB:
