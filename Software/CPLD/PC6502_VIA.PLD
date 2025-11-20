@@ -60,7 +60,7 @@ PINNODE = VIA4;
 /* Address Decode */
 
 
-VIA_nCS = A15 & !A14 & A13 & !A12 & !A11 & !A10  & !A9  & !A8 & A7 & !A6 (VIA1 # VIA2 # VIA3 # VIA4);	/* 0xA080 -> */
+VIA_nCS = A15 & !A14 & A13 & !A12 & !A11 & !A10  & !A9  & !A8 & A7 & !A6 & (VIA1 # VIA2 # VIA3 # VIA4);	/* 0xA080 -> */
 VIA_LED = VIA_nCS;
 
 
