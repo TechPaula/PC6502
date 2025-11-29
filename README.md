@@ -144,7 +144,8 @@ I expect frequent changes as I add/remove things. Everything should have at leas
 | 0xA20- | 0 - 7 | RW | Compact Flash |  | 
 | 0xA30- | 0 - F | RW | AII SLOT 0 |  | 
 | 0xA31- | 0 - F | RW | AII SLOT 1 |  | 
-
+| 0xA32- | 0 - 1 | RW | TFT Display |  |
+| 0xA33- | 0 - 3 | RW | Key Serail (6551) |  |
 
 
 
