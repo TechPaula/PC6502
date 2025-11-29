@@ -1,8 +1,8 @@
-Name     clk_str;
+Name     PC6502_KEYTFT;
 PartNo   ;
-Date     15/08/24;
+Date     2025-11-29;
 Revision ;
-Designer Shonky;
+Designer Paula;
 Company  ;
 Assembly ;
 Location ;
