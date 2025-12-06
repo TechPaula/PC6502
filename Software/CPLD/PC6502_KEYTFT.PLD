@@ -19,8 +19,6 @@ Pin 8  = !nRES;
 Pin 43 = CPU_CLK;
 
 /* Address Bus */
-Pin 43 = A0;
-PIn 6  = A1;
 Pin 9  = A4;
 Pin 12 = A5;
 Pin 14 = A6;
@@ -34,7 +32,7 @@ Pin 21 = A13;
 Pin 24 = A14;
 Pin 26 = A15;
 
-/* display inputs */
+/* display outputs */
 Pin 1  = !DISP_nWAIT;
 Pin 44 = !DISP_nINT;    /* not needed as we don't have resistive touch */
 
