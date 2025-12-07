@@ -46,6 +46,8 @@ Keybed code working, aside from caps lock. Waiting for the full keyset and staba
 
 2025-11-17 - EhBASIC and WozMon enhanced are now up and running on the PC6502 thanks to Shonky. EhBASIC is a little faster, but for me this brings a much needed ability to work with values in hex ($) or binary (%) which makes life a lot easier when trying to drive peripherals and IO.
 
+2025-12-6 - I managed to get text and graphics on the display (image below), I still can't get a single pixel to work, so I'm currently using really short lines. next up will be the keyboard serial interface.
+
 
 ## CPU Board
 Actual PCB:
@@ -93,6 +95,14 @@ I kind of wanted to make my own keyboard rather than using a PS/2 keyboard, it j
 I also had an old QDSP2118 display around, so I figured I'd pop that on there too.
 
 ![PC6502 KeyBed](/Images/Keybed.jpeg?raw=true "KeyBed without keys")
+
+## KeyTFT PCB
+I wanted to use a display that fitted within the sort of cube/tower thing I've got. so I went for an off the shelf RA8875 based display, but with a parallel interface.
+It uses a couple of logic level shifters as the display is 3.3V, it works really well.
+
+![PC6502 Display](/Images/PC6502_Stack_Display.jpeg?raw=true "PC6502 stack with text display")
+![PC6502 Display](/Images/PC6502_DISP_MANDLEBROT.jpeg?raw=true "PC6502 display with mandlebort")
+
 
 
 ### Memory Map
@@ -145,24 +155,24 @@ I expect frequent changes as I add/remove things. Everything should have at leas
 | 0xA30- | 0 - F | RW | AII SLOT 0 |  | 
 | 0xA31- | 0 - F | RW | AII SLOT 1 |  | 
 | 0xA32- | 0 - 1 | RW | TFT Display |  |
-| 0xA33- | 0 - 3 | RW | Key Serail (6551) |  |
+| 0xA33- | 0 - 3 | RW | Key Serial (6551) |  |
 
 
 
 ### Things in build & test
 * **Dual Slot Apple II board**: A board that hosts Slot0 and Slot1 from an apple II, it only has the 5V rail though.
     testing is going slowly, I'm not convinced it's correct yet and I doubt it'll be 100% Apple II card compatible.
+* **KeyTFT board** the TFT portion is fully working, I just need to test the keyboard interface, I'm not expecting anything difficult as it's a standard 6551 chp.
 
 ### PCBs Ordered
-* **RA8875 based display & keyboard interface**: something that can display text and simple graphics and let my type without needing my laptop. I'll probably buy an off the shelf display with this on and memory map it as a peripheral somewhere. I'm hoping to use this in parallel with the USB Serial. I also decided to make my own keyboard, just because :)
+* ****Transputer Link Adapter/Card** and a card to host two TRAMs
 
 
 ## The Future
 I have a bunch of things I want to try adding, some ideas I have are below, some may happen, some may not and they're not in any particular order;
 
-* **RTC & ASCII Display**: Maybe an RTC and an ascii display (I have a couple of QDSP2118 displays somewhere that I'd like to use)
 * **A Complex Sound Engine**: I'm thinking of my own simple Wavetable based sound engine, possibly with analogue VCF/VCAs. Some kind of tracker software or even MIDI interface to go with it?
 * **SD Storage**: I'm going to want something in the long run as retyping code is going to get tedious quickly. I have found a 6502 SPI interface here, so that may speed things up - https://sbc.rictor.org/65spi2.html
 * **Some kind of HDMI grpahics adapter**: My current thinking is the videobeast (https://feertech.com/microbeast/videobeast.html) but that needs a big hole in RAM.
-* **Transputer Link Adapter/Card**: because I still want to use these, but I think having them "speed up" computation on a 6502 is going to have a bigger impact than a 1GHz PC.
+* **RTC & ASCII Display**: Maybe an RTC and an ascii display (I have a couple of QDSP2118 displays somewhere that I'd like to use)
 
