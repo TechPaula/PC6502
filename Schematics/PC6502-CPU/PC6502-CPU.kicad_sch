@@ -8677,9 +8677,9 @@
 		)
 		(uuid "2af77045-da6d-4eba-b44a-c2d9e6298e69")
 	)
-	(text "MCP130 has internal\n5K1 Pull up on ~{RST}"
+	(text "MCP130 has internal\n5K1 Pull up on ~{RST}\n\nAlternative - TC32MEZB\n(no internal resistor,\nbut we don't need that)"
 		(exclude_from_sim no)
-		(at 34.544 206.248 0)
+		(at 32.766 209.042 0)
 		(effects
 			(font
 				(size 1.27 1.27)

@@ -51,18 +51,20 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [
         [
-          "malformed_courtyard|483510878|182342243|adf58578-c2e6-43d6-99bf-d00096f04417|00000000-0000-0000-0000-000000000000",
+          "starved_thermal|140716285|51288167|6dfa675b-b775-4f86-8b1e-2b4d17cbef32|bf558aa0-47f6-4ce6-b650-28d223751d73|F.Cu",
           ""
         ],
         [
-          "malformed_courtyard|483536685|202477344|adf58578-c2e6-43d6-99bf-d00096f04417|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|415215263|230744522|03b4c2a8-d407-4b04-8c97-53c31e3a69a5|00000000-0000-0000-0000-000000000000",
+          "starved_thermal|157577873|62267994|6dfa675b-b775-4f86-8b1e-2b4d17cbef32|66ddc1ba-1e97-461d-9d9c-afe820961f5a|F.Cu",
           ""
         ]
       ],
@@ -112,7 +114,7 @@
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
-        "starved_thermal": "ignore",
+        "starved_thermal": "error",
         "text_height": "warning",
         "text_on_edge_cuts": "error",
         "text_thickness": "warning",
@@ -193,7 +195,9 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -220,7 +224,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -464,14 +473,14 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "PC6502_KEYBED.kicad_pro",
+    "filename": "PC6502-TRANSPUTER.kicad_pro",
     "version": 3
   },
   "net_settings": {
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.127,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -482,7 +491,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 0.127,
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
@@ -548,19 +557,19 @@
           "group_by": true,
           "label": "DNP",
           "name": "${DNP}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
           "label": "Exclude from BOM",
           "name": "${EXCLUDE_FROM_BOM}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
@@ -572,25 +581,19 @@
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
-          "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Arrow Price/Stock",
-          "name": "Arrow Price/Stock",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Height",
-          "name": "Height",
           "show": false
         },
         {
           "group_by": false,
           "label": "LCSC",
           "name": "LCSC",
-          "show": true
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Link",
+          "name": "Link",
+          "show": false
         },
         {
           "group_by": false,
@@ -602,30 +605,6 @@
           "group_by": false,
           "label": "ManufacturerPN",
           "name": "ManufacturerPN",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Manufacturer_Name",
-          "name": "Manufacturer_Name",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Manufacturer_Part_Number",
-          "name": "Manufacturer_Part_Number",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Mouser Part Number",
-          "name": "Mouser Part Number",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Mouser Price/Stock",
-          "name": "Mouser Price/Stock",
           "show": false
         },
         {
@@ -642,8 +621,8 @@
         },
         {
           "group_by": false,
-          "label": "Arrow Part Number",
-          "name": "Arrow Part Number",
+          "label": "Field5",
+          "name": "Field5",
           "show": false
         },
         {
@@ -657,6 +636,12 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser PN",
+          "name": "Mouser PN",
+          "show": true
         }
       ],
       "filter_string": "",
@@ -708,16 +693,16 @@
   },
   "sheets": [
     [
-      "df3f2d3f-c20b-413e-9d55-4328b6be904e",
+      "431ed1ef-9b76-40e5-9f99-258de85faf41",
       "Root"
     ],
     [
-      "21135435-5d70-4384-ab94-39458a8d8073",
-      "KeyMatrix"
+      "115a0da7-e9e1-4461-a165-ab10158ca157",
+      "Link Adapter"
     ],
     [
-      "9b849879-2132-4142-a32f-3bbb2cdbb552",
-      "DISPLAYs"
+      "762baefa-be71-4352-87eb-8f2a0681de42",
+      "TRAM and CONN"
     ]
   ],
   "text_variables": {}
