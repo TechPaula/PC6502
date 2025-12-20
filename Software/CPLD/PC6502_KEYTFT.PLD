@@ -92,11 +92,9 @@ COUNT0.AR = !DISP_nCS # nRES;
 
 
 /* Keyboard Serial port 0xA330 - 0xA333 */			
-CONSOLE_CS = A15 & !A14 & A13 & !A12 & !A11 & !A10 & A9 & A8 & !A7 & !A6 & A5 & A4;
-
-
+KEY_nCS     = A15 & !A14 & A13 & !A12 & !A11 & !A10 & A9 & A8 & !A7 & !A6 & A5 &  A4;
 /* Display parts, address 0xA320-0xA321*/
-DISP_nCS = A15 & !A14 & A13 & !A12 & !A11 & !A10 & A9 & A8 & !A7 & !A6 & A5 & !A4;
+DISP_nCS   = A15 & !A14 & A13 & !A12 & !A11 & !A10 & A9 & A8 & !A7 & !A6 & A5 & !A4;
 DISP_nRES = nRES;
 
 DISP_EN = COUNT0 & !SYSCLK;
