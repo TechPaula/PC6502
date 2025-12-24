@@ -127,6 +127,7 @@
 			(psnegative no)
 			(psa4output no)
 			(plot_black_and_white yes)
+			(plotinvisibletext no)
 			(sketchpadsonfab no)
 			(plotpadnumbers no)
 			(hidednponfab no)
@@ -17276,7 +17277,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "UPLINK1"
+	(gr_text "ANALYSE"
 		(at 165.7 144.8 90)
 		(layer "F.SilkS")
 		(uuid "56cf23b4-7680-4f08-9e59-2a87958df012")

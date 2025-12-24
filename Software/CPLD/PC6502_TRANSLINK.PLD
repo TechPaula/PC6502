@@ -1,0 +1,140 @@
+Name     PC6502_TRANSLINK;
+PartNo   ;
+Date     2025-12;
+Revision ;
+Designer Paula;
+Company  ;
+Assembly ;
+Location ;
+Device	  f1502ispplcc44;
+
+
+
+
+
+
+/*********************************************************
+ *                     INPUT PINS                        *
+ *********************************************************/
+
+/* CPU Control Signals */
+Pin 2  = SYSCLK;
+Pin 1  = RnW;
+Pin 8  = !nRES;
+Pin 43 = CPU_CLK;
+
+/* Address Bus */
+Pin 5  = A0;
+Pin 4  = A1;
+Pin 6  = A2;
+Pin 9  = A4;
+Pin 12 = A5;
+Pin 14 = A6;
+Pin 16 = A7;
+Pin 17 = A8;
+Pin 18 = A9;
+Pin 19 = A10;
+Pin 25 = A11;
+Pin 20 = A12;
+Pin 21 = A13;
+Pin 24 = A14;
+Pin 26 = A15;
+
+/* TRAM/LINK Inputs */
+pin 44 = !TRAM_nERROR;
+
+
+/*********************************************************
+ *                     OUTPUT PINS                       *
+ *********************************************************/
+
+/* Clock Stretch Outputs */
+Pin 28 = !nSLOW0;
+Pin 27 = !nSLOW1;
+
+/* Link Adapter outputs */
+Pin 40 = !LA_nCS;
+Pin 39 = LA_RnW;
+Pin 37 = LA_nRES;
+
+Pin 33 = LA_BUFFDIR;
+Pin 34 = !LA_BUFFnCS;    /* was D2 but I need separate control of buff enable*/
+
+/* TRAM Control */
+Pin 31 = !TRAM_nANALYSE;
+Pin 29 = TRAM_nRESET;
+
+/*********************************************************
+ *              INPUT/OUTPUT PINS                        *
+ *********************************************************/
+
+/* data bus input/outputs */
+Pin 41 = D0;
+Pin 36 = D1;
+/*Pin 34 = D2;*/
+
+/*********************************************************
+ *                        PINNODES                       *
+ *********************************************************/
+
+PINNODE = COUNT_T;
+PINNODE = COUNT1;
+PINNODE = COUNT2;
+PINNODE = I_LACS;
+
+/*********************************************************
+ *                        COUNTERS                       *
+ *********************************************************/
+
+COUNT_T.T  = 'b'1;
+COUNT_T.CK = SYSCLK;
+COUNT_T.AR = !TRAM_CS # nRES;
+
+COUNT1.T  = !COUNT1;
+COUNT1.CK = SYSCLK;
+COUNT1.AR = !I_LACS # nRES;
+
+COUNT2.T = !COUNT2;
+COUNT2.CK = !COUNT1;
+COUNT2.AR = !I_LACS # nRES;
+
+
+
+
+/*********************************************************
+ *                     LOGIC EQUATIONS                   *
+ *********************************************************/
+
+I_LACS  = A15 & !A14 & A13 & !A12 & !A11 & !A10 & A9 & A8 & !A7 & A6 & !A5 & !A4 & !A2;
+TRAM_CS = A15 & !A14 & A13 & !A12 & !A11 & !A10 & A9 & A8 & !A7 & A6 & !A5 & !A4 &  A2;
+
+
+/* A1 = 1 and A0 = 0 are TRAM_RESET */
+TRAM_nRESET.d  = D0;   
+TRAM_nRESET.ck = TRAM_CS & !RnW & COUNT_T & !SYSCLK & A1 & !A0;
+TRAM_nRESET.ar = nRES; 
+
+
+/* A1 = 1 and A0 = 1 are TRAM_ANALYSE */
+TRAM_nANALYSE.d  = D0;   
+TRAM_nANALYSE.ck = TRAM_CS & !RnW & COUNT_T & !SYSCLK & A1 & A0;
+TRAM_nANALYSE.ar = nRES; 
+
+
+/* TODO: add in TRAM ERROR OUT */
+
+
+LA_nCS = I_LACS & COUNT1;
+
+
+LA_nRES = TRAM_nRESET;
+LA_BUFFDIR = !RnW & I_LACS;
+LA_RnW = RnW & I_LACS;
+
+LA_BUFFnCS = I_LACS;
+
+
+nSLOW0 = I_LACS;
+nSLOW1 = I_LACS;
+/* END OF FILE */
+/*****************************************************/
