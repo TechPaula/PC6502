@@ -11,7 +11,7 @@
 41 PY = $02        : REM PIXEL Y POSITION
 42 PC = $00        : REM PIXEL COLOUR
 43 HT = $02        : REM HEIGHT OF BOX
-44 WD = $02        : WIDTH OFF BOX
+44 WD = $02        : REM WIDTH OFF BOX
 
 50 DATA $48,$65,$6C,$6C,$6F,$20,$77,$6F
 51 DATA $72,$6C,$64,$21,$20,$20,$20,$FF

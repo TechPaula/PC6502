@@ -4588,15 +4588,15 @@
 		)
 		(uuid "36c172c0-1392-47ab-a7b9-b75bf3345028")
 	)
-	(text "CPU_CLK is the stretched\nversion of CLK. \nUse nSLOW0 and nSLOW1 to\nslow the clock down"
+	(text "do NOT fit D3, pin 11 (PD1) of the CPLD\nholds this signal LOW, causing very slow\noperation"
 		(exclude_from_sim no)
-		(at 57.658 120.904 0)
+		(at 57.912 129.794 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
-		(uuid "8694d3bd-851c-4a3b-af90-b4bcb20c247d")
+		(uuid "717f05e1-fddf-4639-a6b5-0dd926904225")
 	)
 	(text "6Mhz\n"
 		(exclude_from_sim no)
@@ -4607,16 +4607,6 @@
 			)
 		)
 		(uuid "8f2dbd5f-b9eb-4685-81b3-9d0e1e7f151e")
-	)
-	(text "nIRQ must be open collector/drain"
-		(exclude_from_sim no)
-		(at 54.864 127.508 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "f2195b69-16d0-4106-be9c-1c057e785300")
 	)
 	(junction
 		(at 36.83 43.18)
@@ -9803,7 +9793,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "12ae2da4-d2ac-4f82-a45a-19f7e5aa4b52")
 		(property "Reference" "D3"
 			(at 59.436 134.62 0)
