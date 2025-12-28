@@ -52,32 +52,7 @@
         }
       },
       "diff_pair_dimensions": [],
-      "drc_exclusions": [
-        [
-          "starved_thermal|127480412|98369587|6dfa675b-b775-4f86-8b1e-2b4d17cbef32|1bd78856-e692-4b04-9c0f-b618f8ef13a8|F.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|131554589|103449589|6dfa675b-b775-4f86-8b1e-2b4d17cbef32|26975846-440f-4b22-b900-19e70925235b|B.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|168862500|103650000|6dfa675b-b775-4f86-8b1e-2b4d17cbef32|79cc11f4-1e2c-45f4-8ecc-751d4077efca|F.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|168912500|106050000|6dfa675b-b775-4f86-8b1e-2b4d17cbef32|dd1eaf1a-39db-4ea5-a8c7-a7143d3f6607|F.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|169019588|89110412|6dfa675b-b775-4f86-8b1e-2b4d17cbef32|f3100267-5001-4f98-be95-7e223ce40d2b|F.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|183080000|80830000|6dfa675b-b775-4f86-8b1e-2b4d17cbef32|44a0fef9-5fc5-4625-ab44-fc4e114f12ce|B.Cu",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -119,7 +94,7 @@
         "padstack": "warning",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
-        "silk_edge_clearance": "ignore",
+        "silk_edge_clearance": "warning",
         "silk_over_copper": "warning",
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
@@ -476,7 +451,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "PC6502-SOUND_GEN_A.kicad_pro",
+    "filename": "ROM-EMU.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -636,12 +611,12 @@
   },
   "sheets": [
     [
-      "431ed1ef-9b76-40e5-9f99-258de85faf41",
+      "1aabb9f7-b0e9-4c56-baee-e5c4c6f85330",
       "Root"
     ],
     [
-      "e4770890-9593-49fb-8794-c2eb3eeb4b20",
-      "8BitNCO"
+      "4b208144-852f-4b48-9eed-a9ebc26f8125",
+      "Buttons"
     ]
   ],
   "text_variables": {}

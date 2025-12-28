@@ -53,8 +53,7 @@ Pin 40 = BL;
 Pin 39 = DISP_EN;        /* RA8875 calls this #RD */
 Pin 37 = !DISP_nRES;
 
-/* test points */
-Pin 33 = TP;
+Pin 33 = TXS_OE;     /* TEST POINT, reused */
 
 /*********************************************************
  *              INPUT/OUTPUT PINS                        *
@@ -98,6 +97,7 @@ nSLOW0 = KEY_nCS;
 /* Display parts, address 0xA320-0xA321*/
 DISP_nCS   = A15 & !A14 & A13 & !A12 & !A11 & !A10 & A9 & A8 & !A7 & !A6 & A5 & !A4;
 DISP_nRES = nRES;
+TXS_OE = DISP_nCS;
 
 DISP_EN = COUNT0 & !SYSCLK;
 
