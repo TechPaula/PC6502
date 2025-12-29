@@ -81,6 +81,7 @@ PINNODE = COUNT1;
 COUNT0.T = 'b'1;
 COUNT0.CK = SYSCLK;
 COUNT0.AR = !DISP_nCS # nRES;
+/*COUNT0.AR = !DISP_nCS # !CPU_CLK # nRES;*/    /* USE WITH CLOCK STRETCHING */
 
 
 
@@ -98,16 +99,15 @@ DISP_nCS   = A15 & !A14 & A13 & !A12 & !A11 & !A10 & A9 & A8 & !A7 & !A6 & A5 & 
 DISP_nRES = nRES;
 TXS_OE = DISP_nCS;
 
-/*DISP_EN = COUNT0 & !SYSCLK;*/
-DISP_EN = DISP_nCS & SYSCLK;
+/*DISP_EN = COUNT0 & !SYSCLK;*/    /*Should work for > 8MHz, but doesn't */
+DISP_EN = DISP_nCS & SYSCLK;       /*Use this if running <= 8MHz CPU CLK */
+
+/*nSLOW0 = DISP_nCS # KEY_nCS;*/   /*Should work for > 8MHz, but doesn't */
+nSLOW0 = KEY_nCS;                  /*Use this if running <= 8MHz CPU CLK */
+/*nSLOW1 = DISP_nCS;*/             /*Should work for > 8MHz, but doesn't */
 
 BL = 'b'1;
 
-/*nSLOW0 = DISP_nCS # KEY_nCS;*/
-nSLOW0 = KEY_nCS;
-/*nSLOW1 = DISP_nCS;*/
-
-TP = COUNT0;
 
 
 /* END OF FILE */
