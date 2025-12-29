@@ -90,19 +90,21 @@ COUNT0.AR = !DISP_nCS # nRES;
  *********************************************************/
 
 
-/* Keyboard Serial port 0xA330 - 0xA333 */			
+/* Keyboard Serial port 0xA330 - 0xA33F */			
 KEY_nCS     = A15 & !A14 & A13 & !A12 & !A11 & !A10 & A9 & A8 & !A7 & !A6 & A5 &  A4;
-nSLOW0 = KEY_nCS;
 
-/* Display parts, address 0xA320-0xA321*/
+/* Display parts, address 0xA320-0xA32F*/
 DISP_nCS   = A15 & !A14 & A13 & !A12 & !A11 & !A10 & A9 & A8 & !A7 & !A6 & A5 & !A4;
 DISP_nRES = nRES;
 TXS_OE = DISP_nCS;
 
-DISP_EN = COUNT0 & !SYSCLK;
+/*DISP_EN = COUNT0 & !SYSCLK;*/
+DISP_EN = DISP_nCS & SYSCLK;
 
 BL = 'b'1;
 
+/*nSLOW0 = DISP_nCS # KEY_nCS;*/
+nSLOW0 = KEY_nCS;
 /*nSLOW1 = DISP_nCS;*/
 
 TP = COUNT0;
