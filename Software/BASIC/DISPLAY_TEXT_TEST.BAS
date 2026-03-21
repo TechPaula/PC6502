@@ -1,7 +1,11 @@
 10 REM -------------------------
 11 REM DISPLAY parallel test
 
-20 DT = $A320
+
+20 DT = $A321   : REM LT7683
+21 RG = $A320
+
+20 DT = $A320   : REM RA8875
 21 RG = $A321
 
 30 DA = 0        : REM DATA

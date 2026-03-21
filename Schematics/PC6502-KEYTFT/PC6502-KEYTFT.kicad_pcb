@@ -6705,7 +6705,7 @@
 				)
 			)
 		)
-		(property "Value" "3K3"
+		(property "Value" "1K8"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "359ea54a-9599-40bb-b538-33ea341155f4")
@@ -10656,7 +10656,7 @@
 				)
 			)
 		)
-		(property "Value" "1K8"
+		(property "Value" "3K3"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "be740879-665c-4a21-b5e4-8300f018e757")
